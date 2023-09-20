@@ -43,6 +43,30 @@ import eslint from 'vite-plugin-eslint'
 yarn add commitizen cz-customizable husky lint-staged @commitlint/cli @commitlint/config-conventional -D 
 
 
+#### 1.7 安装 sass
+yarn add -D sass  
+#### 1.7 Postcss CSS 方案 基础设置 (这里没有使用)
+* 安装插件 PostCSS Intellisense and Highlighting
+
+```js
+// postcss.config.cjs
+
+/* eslint-env node */
+module.exports = {
+  plugins: [
+    require('postcss-each-variables'),
+    require('postcss-nested'),
+    require('postcss-each')({
+      plugins: {
+        beforeEach: [
+          require('postcss-for'),
+          require('postcss-color-mix')
+        ]
+      }
+    }),
+  ]
+}
+```
 
 
 
