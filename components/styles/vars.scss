@@ -1,0 +1,68 @@
+:root {
+  /* colors */
+  --zg-color-white: #ffffff;
+  --zg-color-black: #000000;
+
+  @each $val,
+    $color in (primary: #0066ff, success: #67c23a, warning: #fb6d19, danger: #e63737, info: #909399)
+  {
+    --zg-color-#{$val}: #{$color};
+
+    @each $index, $weight in (3: 30%, 5: 50%, 7: 70%, 8: 80%, 9: 90%) {
+      --zg-color-#{$val}-light-#{$index}: #{mix(#ffffff, $color, $weight)};
+    }
+    --zg-color-#{$val}-dark-2: #{mix(#000, $color, 20%)};
+  }
+
+  --zg-bg-color: #ffffff;
+  --zg-bg-color-page: #f2f3f5;
+  --zg-bg-color-overlay: #ffffff;
+  --zg-text-color-primary: #303133;
+  --zg-text-color-regular: #606266;
+  --zg-text-color-secondary: #909399;
+  --zg-text-color-placeholder: #a8abb2;
+  --zg-text-color-disabled: #c0c4cc;
+  --zg-border-color: #dcdfe6;
+  --zg-border-color-light: #e4e7ed;
+  --zg-border-color-lighter: #ebeef5;
+  --zg-border-color-extra-light: #f2f6fc;
+  --zg-border-color-dark: #d4d7de;
+  --zg-border-color-darker: #cdd0d6;
+  --zg-fill-color: #f0f2f5;
+  --zg-fill-color-light: #f5f7fa;
+  --zg-fill-color-lighter: #fafafa;
+  --zg-fill-color-extra-light: #fafcff;
+  --zg-fill-color-dark: #ebedf0;
+  --zg-fill-color-darker: #e6e8eb;
+  --zg-fill-color-blank: #ffffff;
+
+  /* border */
+  --zg-border-width: 1px;
+  --zg-border-style: solid;
+  --zg-border-color-hover: var(--zg-text-color-disabled);
+  --zg-border: var(--zg-border-width) var(--zg-border-style) var(--zg-border-color);
+  --zg-border-radius-base: 4px;
+  --zg-border-radius-small: 2px;
+  --zg-border-radius-round: 20px;
+  --zg-border-radius-circle: 100%;
+
+  /*font*/
+  --zg-font-size-extra-large: 20px;
+  --zg-font-size-large: 18px;
+  --zg-font-size-medium: 16px;
+  --zg-font-size-base: 14px;
+  --zg-font-size-small: 13px;
+  --zg-font-size-extra-small: 12px;
+  --zg-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+  --zg-font-weight-primary: 500;
+
+  /*disabled*/
+  --zg-disabled-bg-color: var(--zg-fill-color-light);
+  --zg-disabled-text-color: var(--zg-text-color-placeholder);
+  --zg-disabled-border-color: var(--zg-border-color-light);
+
+  /*animation*/
+  --zg-transition-duration: 0.3s;
+  --zg-transition-duration-fast: 0.2s;
+}

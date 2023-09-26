@@ -1,0 +1,127 @@
+.zg-button {
+  --zg-button-font-weight: var(--zg-font-weight-primary);
+  --zg-button-border-color: var(--zg-border-color);
+  --zg-button-bg-color: var(--zg-fill-color-blank);
+  --zg-button-text-color: var(--zg-text-color-regular);
+  --zg-button-disabled-text-color: var(--zg-disabled-text-color);
+  --zg-button-disabled-bg-color: var(--zg-fill-color-blank);
+  --zg-button-disabled-border-color: var(--zg-border-color-light);
+  --zg-button-hover-text-color: var(--zg-color-primary);
+  --zg-button-hover-bg-color: var(--zg-color-primary-light-9);
+  --zg-button-hover-border-color: var(--zg-color-primary-light-7);
+  --zg-button-active-text-color: var(--zg-button-hover-text-color); // 1
+  --zg-button-active-border-color: var(--zg-color-primary);
+  --zg-button-active-bg-color: var(--zg-button-hover-bg-color); // 1
+  --zg-button-outline-color: var(--zg-color-primary-light-5);
+  --zg-button-active-color: var(--zg-text-color-primary);
+}
+.zg-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  height: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--zg-button-text-color);
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: var(--zg-button-font-weight);
+  user-select: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: var(--zg-button-bg-color);
+  border: var(--zg-border);
+  border-color: var(--zg-button-border-color);
+  padding: 8px 15px;
+  font-size: var(--zg-font-size-base);
+  border-radius: var(--zg-border-radius-base);
+  & + & {
+    margin-left: 12px;
+  }
+  &:hover,
+  &:focus {
+    color: var(--zg-button-hover-text-color);
+    border-color: var(--zg-button-hover-border-color);
+    background-color: var(--zg-button-hover-bg-color);
+    outline: none;
+  }
+  &:active {
+    color: var(--zg-button-active-text-color);
+    border-color: var(--zg-button-active-border-color);
+    background-color: var(--zg-button-active-bg-color);
+    outline: none;
+  }
+  &.is-plain {
+    --zg-button-hover-text-color: var(--zg-color-primary);
+    --zg-button-hover-bg-color: var(--zg-fill-color-blank);
+    --zg-button-hover-border-color: var(--zg-color-primary);
+  }
+  /*round*/
+  &.is-round {
+    border-radius: var(--zg-border-radius-round);
+  }
+  /*circle*/
+  &.is-circle {
+    border-radius: 50%;
+    padding: 8px;
+  }
+  /*disabled*/
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus,
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    color: var(--zg-button-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: var(--zg-button-disabled-bg-color);
+    border-color: var(--zg-button-disabled-border-color);
+  }
+  .loading-out-lined-icon {
+    margin-right: 4px;
+  }
+}
+@each $val in (primary, success, warning, info, danger) {
+  .zg-button--#{$val} {
+    --zg-button-text-color: var(--zg-color-white);
+    --zg-button-bg-color: var(--zg-color-#{$val});
+    --zg-button-border-color: var(--zg-color-#{$val});
+    --zg-button-outline-color: var(--zg-color-#{$val}-light-5);
+    --zg-button-active-color: var(--zg-color-#{$val}-dark-2);
+    --zg-button-hover-text-color: var(--zg-color-white);
+    --zg-button-hover-bg-color: var(--zg-color-#{$val}-light-3);
+    --zg-button-hover-border-color: var(--zg-color-#{$val}-light-3);
+    --zg-button-active-bg-color: var(--zg-color-#{$val}-dark-2);
+    --zg-button-active-border-color: var(--zg-color-#{$val}-dark-2);
+    --zg-button-disabled-text-color: var(--zg-color-white);
+    --zg-button-disabled-bg-color: var(--zg-color-#{$val}-light-5);
+    --zg-button-disabled-border-color: var(--zg-color-#{$val}-light-5);
+  }
+  .zg-button--#{$val}.is-plain {
+    --zg-button-text-color: var(--zg-color-#{$val});
+    --zg-button-bg-color: var(--zg-color-#{$val}-light-9);
+    --zg-button-border-color: var(--zg-color-#{$val}-light-5);
+    --zg-button-hover-text-color: var(--zg-color-white);
+    --zg-button-hover-bg-color: var(--zg-color-#{$val});
+    --zg-button-hover-border-color: var(--zg-color-#{$val});
+    --zg-button-active-text-color: var(--zg-color-white);
+  }
+}
+.zg-button--large {
+  --zg-button-size: 40px;
+  height: var(--zg-button-size);
+  padding: 12px 19px;
+  font-size: var(--zg-font-size-base);
+  border-radius: var(--zg-border-radius-base);
+}
+.zg-button--small {
+  --zg-button-size: 24px;
+  height: var(--zg-button-size);
+  padding: 5px 11px;
+  font-size: 12px;
+  border-radius: calc(var(--zg-border-radius-base) - 1px);
+}

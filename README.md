@@ -68,5 +68,10 @@ module.exports = {
 }
 ```
 
-
+### 2.SVG Icons （目标独立打包出icons）
+1. 动态生成icon 的 tsx文件
+```js
+"gen:icon": "node scripts/genIcons.mjs"
+```
+2. vitepress 引入
 
