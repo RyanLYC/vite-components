@@ -73,5 +73,6 @@ module.exports = {
 ```js
 "gen:icon": "node scripts/genIcons.mjs"
 ```
-2. vitepress 引入
+2. vitepress 引入icos
+3. yarn docs:dev
 

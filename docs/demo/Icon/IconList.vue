@@ -4,7 +4,7 @@ import { iconNames } from './icons'
 
 type IconType = keyof typeof Icons
 
-const iconArray = iconNames as IconType[]
+const iconsArray = iconNames as IconType[]
 
 const copyItem = (name: string) => {
   if (navigator.clipboard) {
@@ -14,7 +14,7 @@ const copyItem = (name: string) => {
 </script>
 <template>
   <ul class="demo-icon-list">
-    <li class="icon-item" v-for="item in iconArray" :key="item" @click="copyItem(item)">
+    <li class="icon-item" v-for="item in iconsArray" :key="item" @click="copyItem(item)">
       <component :is="Icons[item]"></component>
       <span class="icon-name">{{ item }}</span>
     </li>

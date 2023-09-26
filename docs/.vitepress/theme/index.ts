@@ -1,11 +1,11 @@
 // .vitepress/theme/index.js
-import { h } from 'vue'
+// import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 // import AdComponent from './AdComponent.vue'
 import { ElementPlusContainer } from '@vitepress-demo-preview/component'
 
 import '@vitepress-demo-preview/component/dist/style.css'
-import '../../../components/styles/index.scss'
+import '../../../src/components/styles/index.scss'
 import './custom.css'
 // @ts-ignore
 import * as Icons from '@/components/Icon'

@@ -1,5 +1,3 @@
-import { ref } from 'vue'
-
 export type ThemeType = 'dark' | 'light'
 
 const ThemeClassList = ['theme-dark', 'theme-light']

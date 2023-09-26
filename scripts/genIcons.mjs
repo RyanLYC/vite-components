@@ -5,8 +5,8 @@ import { readdirSync, writeFileSync } from 'fs'
 import optimizeSvg from './optimizeSvg.mjs'
 import { stringToCamelCase } from './utils.mjs'
 
-const outputPath = join(process.cwd(), './components/icon/packages')
-const outpuIndexPath = join(process.cwd(), './components/icon')
+const outputPath = join(process.cwd(), './src/components/icon/packages')
+const outpuIndexPath = join(process.cwd(), './src/components/icon')
 const exportAllIconPath = join(process.cwd(), './docs/demo/Icon/icons.ts')
 const iconFileBase = join(process.cwd(), './icons')
 const iconFiles = readdirSync(iconFileBase)

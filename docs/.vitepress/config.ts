@@ -19,8 +19,12 @@ export default defineConfig({
     plugins: [vueJsx()],
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('../../', import.meta.url)),
+        '@': fileURLToPath(new URL('../../src/', import.meta.url)),
       },
+    },
+    server: {
+      port: 5174, // 设置服务启动端口号
+      open: true, // 设置服务启动时是否自动打开浏览器
     },
   },
 
