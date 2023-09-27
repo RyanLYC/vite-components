@@ -50,7 +50,7 @@ if (pathExistsSync(componentPath)) {
   )
 
   // style
-  outputFileSync(join(componentPath, `style.scss`))
+  outputFileSync(join(componentPath, `style.scss`), '')
 
   // index.ts
   const indexTpl = `
