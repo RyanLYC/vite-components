@@ -1,10 +1,10 @@
 import { type App } from 'vue'
 
-import './styles/index.scss'
+import '../styles/index.scss'
 
 // 引入组件
 import Button from '@/components/Button'
-import { useTheme } from './hooks/useTheme'
+// import { useTheme } from '@/hooks/useTheme'
 
 const components = [Button]
 
@@ -16,7 +16,7 @@ const install = (app: App) => {
 }
 
 // 局部注册
-export { Button, install, useTheme }
+export { Button, install }
 
 export default {
   install,

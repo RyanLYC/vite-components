@@ -5,7 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import { ElementPlusContainer } from '@vitepress-demo-preview/component'
 
 import '@vitepress-demo-preview/component/dist/style.css'
-import '../../../src/components/styles/index.scss'
+import '../../../src/styles/index.scss'
 import './custom.css'
 // @ts-ignore
 import * as Icons from '@/components/Icon'
