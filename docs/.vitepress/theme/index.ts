@@ -8,7 +8,10 @@ import '@vitepress-demo-preview/component/dist/style.css'
 import '../../../src/styles/index.scss'
 import './custom.css'
 // @ts-ignore
-import * as Icons from '@/components/Icon'
+// import * as Icons from '@/components/Icon'
+// 引入 打包后的 icon 组件库
+import * as Icons from '../../../dist-icon/index.es'
+import '../../../dist-icon/style.css'
 
 export default {
   ...DefaultTheme,

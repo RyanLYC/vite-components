@@ -3,7 +3,7 @@ import { stringToCamelCase } from './utils.mjs'
 import { join } from 'path'
 import fs from 'fs-extra'
 
-const { pathExistsSync, outputFileSync, copySync } = fs
+const { pathExistsSync, outputFileSync } = fs
 
 function hyphenate(str) {
   if (!str) {
