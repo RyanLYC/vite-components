@@ -54,6 +54,9 @@ if (pathExistsSync(componentPath)) {
   // style
   outputFileSync(join(componentPath, `style.scss`), '')
 
+  // types.ts
+  outputFileSync(join(componentPath, `types.ts`), '')
+
   // index.ts
   const indexTpl = `
     import { withInstall } from '../util/withInstall'
