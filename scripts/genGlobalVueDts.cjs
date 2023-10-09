@@ -14,7 +14,8 @@ function copyDtsFile() {
   // 插入引入到 index.d.ts 文件中
   let res = fs.readFileSync(indexPath, { encoding: 'utf-8' })
 
-  res = '/// <reference types="./global.d.ts" />\n' + res
+  res =
+    '/// <reference types="./global.d.ts" />\n' + res.replace(`import '../styles/index.scss';`, '')
 
   fs.writeFileSync(indexPath, res, 'utf8')
 }
