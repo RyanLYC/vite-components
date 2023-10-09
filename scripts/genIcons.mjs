@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { join, basename } from 'path'
-import { readdirSync, writeFileSync } from 'fs'
+import { readdirSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 
 import optimizeSvg from './optimizeSvg.mjs'
 import { stringToCamelCase } from './utils.mjs'
@@ -42,6 +42,10 @@ function genIconIndex(iconNames) {
 }
 
 function gen() {
+  if (!existsSync(outputPath)) {
+    mkdirSync(outputPath)
+  }
+
   const svgDatas = optimizeSvg(iconFiles.map((item) => join(iconFileBase, item)))
   const iconNames = []
   for (const { fileName, data } of svgDatas) {

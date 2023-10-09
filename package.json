@@ -39,7 +39,9 @@
     "build:icon": "node scripts/build-icon.cjs",
     "build:type": "最新写法的vue文件解释有问题 node scripts/build-types.cjs",
     "build:tsc": "vue-tsc -p tsconfig.declaration.json",
-    "build": "rimraf ./dist && vite build && yarn build:icon && yarn build:tsc && node scripts/genGlobalVueDts.cjs"
+    "build": "rimraf ./dist && vite build && yarn build:icon && yarn build:tsc && node scripts/genGlobalVueDts.cjs",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "vite-components-last": "^0.0.20",
@@ -72,6 +74,7 @@
     "@vue/compiler-sfc": "^3.3.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/test-utils": "^2.4.1",
     "@vue/tsconfig": "^0.4.0",
     "commitizen": "^4.3.0",
     "cz-customizable": "^7.0.0",
@@ -81,6 +84,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "^11.1.1",
     "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
     "lint-staged": "^14.0.1",
     "npm-run-all2": "^6.0.6",
     "prettier": "^3.0.3",
@@ -88,9 +92,10 @@
     "svgo": "^3.0.2",
     "ts-morph": "^20.0.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9",
+    "vite": "^4.4.11",
     "vite-plugin-eslint": "^1.8.1",
     "vitepress": "^1.0.0-rc.15",
+    "vitest": "^0.34.6",
     "vue-tsc": "^1.8.18"
   }
 }

@@ -20,8 +20,8 @@ import { LoadingOutlined, ArrowUpOutlined } from 'vite-components-last/icon'
 - ts 文件引入 （暂时没找到优雅的解决办法。）
 ```js
 // env.d.ts 文件中添加
-/// <reference types="./node_modules/vite-components-last/dist/types" />
-// tsconfig.json
+/// <reference types="vite-components-last/dist/types" />
+// 注意 tsconfig.json
 "include": ["env.d.ts",....]
 
 `思考了下` 主要是要把 ts 的声明文件存放到node_modules的@types文件夹中，然后 tsconfig.json的types 中 增加 'vite-components-last',需要给个cli 处理，安装组件库，复制ts定义文件到@types 中，修改 tsconfig.json的types
@@ -147,3 +147,8 @@ declare module 'vue' {
 
 ### vitepress 生成doc文档
 
+### Vitest & vue-test-utils 测试框架
+* yarn add  vitest -D
+* yarn add  @vue/test-utils -D
+
+` 也可以使用 vue-testing-library `
