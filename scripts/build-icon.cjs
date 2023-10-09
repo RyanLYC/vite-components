@@ -5,22 +5,21 @@ const { build, defineConfig } = require('vite')
 
 const vue = require('@vitejs/plugin-vue')
 const vueJsx = require('@vitejs/plugin-vue-jsx')
-const DefineOptions = require('unplugin-vue-define-options/vite')
 
 const rootPath = process.cwd()
-const outDir = path.join(rootPath, 'dist-icon')
+const outDir = path.join(rootPath, 'dist/icon')
 
 function resolve(...urlOrUrls) {
   return path.resolve(rootPath, ...urlOrUrls)
 }
 
 const baseConfig = defineConfig({
-  plugins: [vue(), vueJsx(), DefineOptions()],
+  plugins: [vue(), vueJsx()],
   build: {
     copyPublicDir: false,
     lib: {
       entry: resolve('src/components/Icon/index.ts'),
-      name: 'zgui-icon',
+      name: 'zgui',
       fileName: (format) => `index.${format}.js`,
     },
     outDir,
@@ -38,7 +37,7 @@ const baseConfig = defineConfig({
 })
 
 async function main() {
-  fs.mkdirsSync('dist-icon')
+  fs.mkdirsSync(outDir)
   // build
   await build(baseConfig)
 }

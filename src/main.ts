@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import element from './components'
+// import zgui from './components'
+import zgui from 'vite-components-last'
+import 'vite-components-last/dist/style.css'
 
 const app = createApp(App)
-app.use(element)
+app.use(zgui)
 app.mount('#app')

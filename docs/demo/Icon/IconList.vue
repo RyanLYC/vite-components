@@ -32,7 +32,9 @@ const copyItem = (name: string) => {
   list-style-type: none !important;
 
   .icon-item {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 90px;
     font-size: 15px;
     border-right: 1px solid var(--zg-border-color);

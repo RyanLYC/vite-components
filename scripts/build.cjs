@@ -1,12 +1,15 @@
 /* eslint-disable no-undef */
+
+/** 这个打包 方式 有问题 待调试vite解决，vite config 中 没问题 */
+
 const path = require('path')
 const fs = require('fs-extra')
 const { build, defineConfig } = require('vite')
 
 const vue = require('@vitejs/plugin-vue')
-const vueJsx = require('@vitejs/plugin-vue-jsx')
-const dts = require('vite-plugin-dts')
-const DefineOptions = require('unplugin-vue-define-options/vite')
+// const vueJsx = require('@vitejs/plugin-vue-jsx')
+// const dts = require('vite-plugin-dts')
+// const DefineOptions = require('unplugin-vue-define-options/vite')
 
 const rootPath = process.cwd()
 const outDir = path.join(rootPath, 'dist')
@@ -18,18 +21,18 @@ function resolve(...urlOrUrls) {
 const baseConfig = defineConfig({
   plugins: [
     vue(),
-    vueJsx(),
-    DefineOptions(),
-    dts({
-      include: ['src/components/Icon'],
-      outputDir: path.resolve(outDir, 'types'),
-    }),
+    // vueJsx(),
+    // DefineOptions(),
+    // dts({
+    //   include: ['src/components'],
+    //   outputDir: path.resolve(outDir, 'types'),
+    // }),
   ],
   build: {
     copyPublicDir: false,
     lib: {
-      entry: resolve('src/components/Icon/index.ts'),
-      name: 'zgui-icon',
+      entry: resolve('src/components/index.ts'),
+      name: 'zgui',
       fileName: (format) => `index.${format}.js`,
     },
     outDir,

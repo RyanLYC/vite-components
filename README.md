@@ -1,4 +1,24 @@
-### 1. 创建项目
+## 组件库使用
+```shell
+  yarn add vite-components-last -S
+```
+- 全局引入
+```js
+import zgui from 'vite-components-last'
+import 'vite-components-last/dist/style.css'
+
+// icon
+import { LoadingOutlined, ArrowUpOutlined } from 'vite-components-last/icon'
+```
+
+- 局部引入
+```js
+import { ZgButton } from 'vite-components-last'
+import { LoadingOutlined, ArrowUpOutlined } from 'vite-components-last/icon'
+```
+
+## 项目构建 流程
+### 1. 创建项目 
 
 #### 1.1 npm create vue@3
 
@@ -69,14 +89,51 @@ module.exports = {
 ```
 
 ### 2. 自动化生成组件模版
+```js
+    "gen": "node scripts/createComponent.mjs",
+```
+1. 创建组件模版
+2. global.d.ts.template 中增加组件的全局定义
+3. index.ts 中 自动引入
 
-### 3.SVG Icons  
-1. 动态生成icon 的 tsx文件
+### 3.SVG Icons 动态生成icon 的 tsx文件
 ```js
 "gen:icon": "node scripts/genIcons.mjs",
 "build:icon": "node scripts/build-icon.js",
 ```
-2. vitepress 引入icos
-3. yarn docs:dev
-4. 独立打包出icons `build:icon`
+1. 根据 icon 文件夹中的svg 文件自动生成 对应icon的 tsx 组件文件
+2. 独立打包出icons `build:icon`
+
+### vite config 配置 build
+打包组件库
+
+### script buile-types 打包声明文件 
+ * 使用 ts-morph 生成 .d.ts 文件，@vue/compiler-sfc 解释vue文件
+ * @vue/compiler-sfc 解释3.3.4 最新语法有问题 
+
+### vue-tsc 打包 声明文件
+
+### 复制全局定义组件文件到dist中并引入
+```js
+  node scripts/genGlobalVueDts.cjs
+```
+主要是因为全局注入组件库的时候，volar组件的属性没有提示信息。
+```js
+import ZgButton from './Button'
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    ZgButton: typeof ZgButton
+  }
+}
+
+```
+文件复制到dist type中，并在index.d.ts中 reference
+
+### buid & publish
+```js
+    "build": "rimraf ./dist && vite build && yarn build:icon && yarn build:tsc && node scripts/genGlobalVueDts.cjs"
+```
+
+### vitepress 生成doc文档
 

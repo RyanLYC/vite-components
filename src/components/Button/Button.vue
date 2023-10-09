@@ -28,9 +28,9 @@ import { ref } from 'vue'
 import type { ButtonProps } from './types'
 import LoadingOutlined from '../Icon/packages/LoadingOutlined'
 
-// defineOptions({
-//   name: 'ZgButton',
-// })
+defineOptions({
+  name: 'ZgButton',
+})
 
 withDefaults(defineProps<ButtonProps>(), {
   nativeType: 'button',

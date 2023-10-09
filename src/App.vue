@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { LoadingOutlined, ArrowUpOutlined } from '@/components/Icon'
+import { LoadingOutlined, ArrowUpOutlined } from 'vite-components-last/icon'
 
 const primaryBtn = ref()
 
@@ -13,8 +13,8 @@ onMounted(() => {
 
 <template>
   <div>
-    <ZgButton type="primary" ref="primaryBtn" loading>primary</ZgButton>
-    <ZgButton type="success">success</ZgButton>
+    <zg-button type="primary" ref="primaryBtn" loading>primary</zg-button>
+    <ZgButton type="success" :loading="true">success</ZgButton>
     <ZgButton type="warning">warning</ZgButton>
     <ZgButton type="danger">danger</ZgButton>
     <ZgButton type="info">info</ZgButton>
@@ -22,7 +22,13 @@ onMounted(() => {
   <div>
     <ZgButton type="primary" circle><LoadingOutlined /> </ZgButton>
     <ZgButton type="success" circle><ArrowUpOutlined rotate="45" /> </ZgButton>
+    <zg-button type="info" :plain="true">666</zg-button>
+    <ZgButton type="danger">danger</ZgButton>
   </div>
 </template>
 
-<style></style>
+<style>
+div {
+  padding: 5px;
+}
+</style>

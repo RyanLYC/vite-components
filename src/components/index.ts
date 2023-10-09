@@ -3,20 +3,20 @@ import { type App } from 'vue'
 import '../styles/index.scss'
 
 // 引入组件
-import Button from '@/components/Button'
-// import { useTheme } from '@/hooks/useTheme'
+import ZgButton from './Button'
 
-const components = [Button]
+const components = [ZgButton]
 
 // 全局注册
 const install = (app: App) => {
   components.forEach((component) => {
-    app.component(component.name, component)
+    app.use(component)
   })
+  return app
 }
 
 // 局部注册
-export { Button, install }
+export { ZgButton, install }
 
 export default {
   install,

@@ -1,0 +1,7 @@
+import ZgButton from './Button'
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    ZgButton: typeof ZgButton
+  }
+}
