@@ -16,6 +16,7 @@ export default defineConfig({
   /**URL中删除尾随的.html */
   cleanUrls: true,
   vite: {
+    // @ts-ignore
     plugins: [vueJsx()],
     resolve: {
       alias: {
@@ -24,7 +25,7 @@ export default defineConfig({
     },
     server: {
       port: 5174, // 设置服务启动端口号
-      open: true, // 设置服务启动时是否自动打开浏览器
+      open: false, // 设置服务启动时是否自动打开浏览器
     },
   },
 
@@ -122,6 +123,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Button', link: 'button' },
         { text: 'Icon', link: 'icon' },
+        { text: 'Collapse', link: 'collapse' },
       ]
     },
     // {

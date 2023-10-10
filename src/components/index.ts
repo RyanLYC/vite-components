@@ -3,9 +3,11 @@ import { type App } from 'vue'
 import '../styles/index.scss'
 
 // 引入组件
+import ZgCollapseItem from './CollapseItem'
+import ZgCollapse from './Collapse'
 import ZgButton from './Button'
 
-const components = [ZgButton]
+const components = [ZgButton, ZgCollapse, ZgCollapseItem]
 
 // 全局注册
 const install = (app: App) => {
@@ -16,7 +18,7 @@ const install = (app: App) => {
 }
 
 // 局部注册
-export { ZgButton, install }
+export { ZgButton, ZgCollapse, ZgCollapseItem, install }
 
 export default {
   install,

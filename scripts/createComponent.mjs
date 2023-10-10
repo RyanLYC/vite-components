@@ -38,6 +38,9 @@ if (pathExistsSync(componentPath)) {
     </template>
 
     <script lang="ts" setup>
+    defineOptions({
+      name: 'Zg${componentName}',
+    })
     </script>
     `
   )

@@ -1,0 +1,62 @@
+.zg-collapse {
+  --zg-collapse-border-color: var(--zg-border-color-light);
+  --zg-collapse-header-height: 48px;
+  --zg-collapse-header-bg-color: var(--zg-fill-color-blank);
+  --zg-collapse-header-text-color: var(--zg-text-color-primary);
+  --zg-collapse-header-font-size: 13px;
+  --zg-collapse-content-bg-color: var(--zg-fill-color-blank);
+  --zg-collapse-content-font-size: 13px;
+  --zg-collapse-content-text-color: var(--zg-text-color-primary);
+  --zg-collapse-disabled-text-color: var(--zg-disabled-text-color);
+  --zg-collapse-disabled-border-color: var(--zg-border-color-lighter);
+  border-top: 1px solid var(--zg-collapse-border-color);
+  border-bottom: 1px solid var(--zg-collapse-border-color);
+}
+.zg-collapse-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--zg-collapse-header-height);
+  line-height: var(--zg-collapse-header-height);
+  background-color: var(--zg-collapse-header-bg-color);
+  color: var(--zg-collapse-header-text-color);
+  cursor: pointer;
+  font-size: var(--zg-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--zg-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--zg-collapse-border-color);
+  &.is-disabled {
+    color: var(--zg-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+  &.is-active {
+    border-bottom-color: transparent;
+    .header-angle {
+      transform: rotate(0deg);
+    }
+  }
+  .header-angle {
+    transform: rotate(-90deg);
+    transition: transform var(--zg-transition-duration);
+  }
+}
+.zg-collapse-item__content {
+  will-change: height;
+  background-color: var(--zg-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--zg-collapse-content-font-size);
+  color: var(--zg-collapse-content-text-color);
+  border-bottom: 1px solid var(--zg-collapse-border-color);
+  padding-bottom: 20px;
+}
+
+.collapse-transition-enter-active,
+.collapse-transition-leave-active {
+  transition:
+    var(--zg-transition-duration) max-height ease-in-out,
+    var(--zg-transition-duration) padding-top ease-in-out,
+    var(--zg-transition-duration) padding-bottom ease-in-out;
+}

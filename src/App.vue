@@ -9,6 +9,8 @@ onMounted(() => {
     console.log('primaryBtn:', primaryBtn.value.ref)
   }
 })
+
+const openedValue = ref(['a'])
 </script>
 
 <template>
@@ -24,6 +26,20 @@ onMounted(() => {
     <ZgButton type="success" circle><ArrowUpOutlined rotate="45" /> </ZgButton>
     <zg-button type="info" :plain="true">666</zg-button>
     <ZgButton type="danger">danger</ZgButton>
+  </div>
+  <div>
+    <ZgCollapse v-model="openedValue">
+      <ZgCollapseItem name="a" title="Title A">
+        <h1>headline title</h1>
+        <div>this is content a aaa</div>
+      </ZgCollapseItem>
+      <ZgCollapseItem name="b" title="Title B">
+        <div>this is bbbbb test</div>
+      </ZgCollapseItem>
+      <ZgCollapseItem name="c" title="Disabled Title" disabled>
+        <div>this is cccc test</div>
+      </ZgCollapseItem>
+    </ZgCollapse>
   </div>
 </template>
 

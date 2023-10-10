@@ -1,50 +1,50 @@
 <script lang="ts" setup>
-import Button from '@/components/Button'
+import ZgButton from '@/components/Button'
 </script>
 <template>
   <div class="basic block">
-    <Button> hello </Button>
-    <Button type="primary"> Primary </Button>
-    <Button type="success"> Success </Button>
-    <Button type="warning"> Warning </Button>
-    <Button type="danger"> Danger </Button>
-    <Button type="info"> Info </Button>
+    <ZgButton> hello </ZgButton>
+    <ZgButton type="primary"> Primary </ZgButton>
+    <ZgButton type="success"> Success </ZgButton>
+    <ZgButton type="warning"> Warning </ZgButton>
+    <ZgButton type="danger"> Danger </ZgButton>
+    <ZgButton type="info"> Info </ZgButton>
   </div>
 
   <div class="plain block">
-    <Button plain> hello </Button>
-    <Button type="primary" plain> Primary </Button>
-    <Button type="success" plain> Success </Button>
-    <Button type="warning" plain> Warning </Button>
-    <Button type="danger" plain> Danger </Button>
-    <Button type="info" plain> Info </Button>
+    <ZgButton plain> hello </ZgButton>
+    <ZgButton type="primary" plain> Primary </ZgButton>
+    <ZgButton type="success" plain> Success </ZgButton>
+    <ZgButton type="warning" plain> Warning </ZgButton>
+    <ZgButton type="danger" plain> Danger </ZgButton>
+    <ZgButton type="info" plain> Info </ZgButton>
   </div>
 
   <div class="round block">
-    <Button round> hello </Button>
-    <Button type="primary" round> Primary </Button>
-    <Button type="success" round> Success </Button>
-    <Button type="warning" round> Warning </Button>
-    <Button type="danger" round> Danger </Button>
-    <Button type="info" round> Info </Button>
+    <ZgButton round> hello </ZgButton>
+    <ZgButton type="primary" round> Primary </ZgButton>
+    <ZgButton type="success" round> Success </ZgButton>
+    <ZgButton type="warning" round> Warning </ZgButton>
+    <ZgButton type="danger" round> Danger </ZgButton>
+    <ZgButton type="info" round> Info </ZgButton>
   </div>
 
   <div class="circle block">
-    <Button circle> <UserOutlined /></Button>
-    <Button type="primary" circle> <ArrowDownOutlined /> </Button>
-    <Button type="success" circle> <ArrowUpOutlined /> </Button>
-    <Button type="warning" circle> <LoadingOutlined /> </Button>
-    <Button type="danger" circle> <SearchOutlined /> </Button>
-    <Button type="info" circle> <UserOutlined /> </Button>
+    <ZgButton circle> <UserOutlined /></ZgButton>
+    <ZgButton type="primary" circle> <ArrowDownOutlined /> </ZgButton>
+    <ZgButton type="success" circle> <ArrowUpOutlined /> </ZgButton>
+    <ZgButton type="warning" circle> <LoadingOutlined /> </ZgButton>
+    <ZgButton type="danger" circle> <SearchOutlined /> </ZgButton>
+    <ZgButton type="info" circle> <UserOutlined /> </ZgButton>
   </div>
 
   <div class="disable block">
-    <Button disabled> hello </Button>
-    <Button type="primary" disabled> Primary </Button>
-    <Button type="success" disabled> Success </Button>
-    <Button type="warning" disabled> Warning </Button>
-    <Button type="danger" disabled> Danger </Button>
-    <Button type="info" disabled> Info </Button>
+    <ZgButton disabled> hello </ZgButton>
+    <ZgButton type="primary" disabled> Primary </ZgButton>
+    <ZgButton type="success" disabled> Success </ZgButton>
+    <ZgButton type="warning" disabled> Warning </ZgButton>
+    <ZgButton type="danger" disabled> Danger </ZgButton>
+    <ZgButton type="info" disabled> Info </ZgButton>
   </div>
 </template>
 <style>
