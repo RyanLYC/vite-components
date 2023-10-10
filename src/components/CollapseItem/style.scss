@@ -11,7 +11,7 @@
   color: var(#{getCssVarName('text', 'color-primary')});
   cursor: pointer;
   font-size: var(#{getCssVarName('font', 'size-base')});
-  font-weight: 500;
+  font-weight: var(#{getCssVarName('font', 'weight-primary')});
   transition: border-bottom-color var(--zg-transition-duration);
   outline: none;
   border-bottom: 1px solid var(#{getCssVarName('border', 'color-light')});
