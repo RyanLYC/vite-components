@@ -1,0 +1,16 @@
+// join var name
+// joinVarName(('button', 'text-color')) => '--zg-button-text-color'
+@function joinVarName($list) {
+  $name: '--zg';
+  @each $item in $list {
+    @if $item != '' {
+      $name: $name + '-' + $item;
+    }
+  }
+  @return $name;
+}
+
+// getCssVarName('button', 'text-color') => '--zg-button-text-color'
+@function getCssVarName($args...) {
+  @return joinVarName($args);
+}

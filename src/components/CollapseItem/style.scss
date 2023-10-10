@@ -1,14 +1,5 @@
 .zg-collapse-item {
-  --zg-collapse-border-color: var(--zg-border-color-light);
   --zg-collapse-header-height: 48px;
-  --zg-collapse-header-bg-color: var(--zg-fill-color-blank);
-  --zg-collapse-header-text-color: var(--zg-text-color-primary);
-  --zg-collapse-header-font-size: 13px;
-  --zg-collapse-content-bg-color: var(--zg-fill-color-blank);
-  --zg-collapse-content-font-size: 13px;
-  --zg-collapse-content-text-color: var(--zg-text-color-primary);
-  --zg-collapse-disabled-text-color: var(--zg-disabled-text-color);
-  --zg-collapse-disabled-border-color: var(--zg-border-color-lighter);
 }
 .zg-collapse-item__header {
   display: flex;
@@ -16,21 +7,20 @@
   justify-content: space-between;
   height: var(--zg-collapse-header-height);
   line-height: var(--zg-collapse-header-height);
-  background-color: var(--zg-collapse-header-bg-color);
-  color: var(--zg-collapse-header-text-color);
+  background-color: var(#{getCssVarName('fill', 'color-blank')});
+  color: var(#{getCssVarName('text', 'color-primary')});
   cursor: pointer;
-  font-size: var(--zg-collapse-header-font-size);
+  font-size: var(#{getCssVarName('font', 'size-base')});
   font-weight: 500;
   transition: border-bottom-color var(--zg-transition-duration);
   outline: none;
-  border-bottom: 1px solid var(--zg-collapse-border-color);
+  border-bottom: 1px solid var(#{getCssVarName('border', 'color-light')});
   &.is-disabled {
-    color: var(--zg-collapse-disabled-text-color);
+    color: var(#{getCssVarName('disabled', 'text-color')});
     cursor: not-allowed;
     background-image: none;
   }
   &.is-active {
-    border-bottom-color: transparent;
     .header-angle {
       transform: rotate(0deg);
     }
@@ -42,12 +32,12 @@
 }
 .zg-collapse-item__content {
   will-change: height;
-  background-color: var(--zg-collapse-content-bg-color);
+  background-color: var(#{getCssVarName('fill', 'color-blank')});
   overflow: hidden;
   box-sizing: border-box;
-  font-size: var(--zg-collapse-content-font-size);
-  color: var(--zg-collapse-content-text-color);
-  border-bottom: 1px solid var(--zg-collapse-border-color);
+  font-size: var(#{getCssVarName('font', 'size-small')});
+  color: var(#{getCssVarName('text', 'color-primary')});
+  border-bottom: 1px solid var(#{getCssVarName('border', 'color-light')});
   padding-bottom: 20px;
 }
 
