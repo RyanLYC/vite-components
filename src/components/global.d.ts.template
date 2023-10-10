@@ -9,3 +9,7 @@ declare module 'vue' {
     ZgButton: typeof ZgButton
   }
 }
+
+declare module 'vite-components-last' {
+  export type NameType = string | number
+}

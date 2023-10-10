@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-// import zgui from './components'
 import zgui from 'vite-components-last'
 import 'vite-components-last/dist/style.css'
 
