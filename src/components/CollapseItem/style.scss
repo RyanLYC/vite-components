@@ -1,4 +1,4 @@
-.zg-collapse {
+.zg-collapse-item {
   --zg-collapse-border-color: var(--zg-border-color-light);
   --zg-collapse-header-height: 48px;
   --zg-collapse-header-bg-color: var(--zg-fill-color-blank);
@@ -9,8 +9,6 @@
   --zg-collapse-content-text-color: var(--zg-text-color-primary);
   --zg-collapse-disabled-text-color: var(--zg-disabled-text-color);
   --zg-collapse-disabled-border-color: var(--zg-border-color-lighter);
-  border-top: 1px solid var(--zg-collapse-border-color);
-  border-bottom: 1px solid var(--zg-collapse-border-color);
 }
 .zg-collapse-item__header {
   display: flex;
