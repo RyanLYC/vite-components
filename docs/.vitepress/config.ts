@@ -121,9 +121,11 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'Components',
       collapsed: false,
       items: [
+        { text: 'Color', link: 'color' },
         { text: 'Button', link: 'button' },
         { text: 'Icon', link: 'icon' },
         { text: 'Collapse', link: 'collapse' },
+
       ]
     },
     // {
