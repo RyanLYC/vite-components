@@ -3,7 +3,7 @@
     "outDir": "dist/types",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "jsx": "preserve" //'react', //
+    "jsx": "preserve"
   },
   "include": ["src/components"],
   "exclude": ["node_modules", "**/__tests__/**"]
