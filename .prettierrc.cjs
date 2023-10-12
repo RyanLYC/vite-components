@@ -1,6 +1,6 @@
 module.exports = {
   // 1.一行代码的最大字符数，默认是80(printWidth: <int>)
-  printWidth: 100,
+  printWidth: 150,
   // 2.tab宽度为2空格(tabWidth: <int>)
   tabWidth: 2,
   // 3.是否使用tab来缩进，我们使用空格(useTabs: <bool>)
@@ -37,5 +37,5 @@ module.exports = {
   // 使用默认的折行标准
   proseWrap: 'always',
   // 根据显示样式决定 html 要不要折行
-  htmlWhitespaceSensitivity: 'css'
+  htmlWhitespaceSensitivity: 'css',
 }

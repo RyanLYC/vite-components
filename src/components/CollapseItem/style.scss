@@ -12,7 +12,7 @@
   cursor: pointer;
   font-size: var(#{getCssVarName('font', 'size-base')});
   font-weight: var(#{getCssVarName('font', 'weight-primary')});
-  transition: border-bottom-color var(--zg-transition-duration);
+  transition: border-bottom-color var(#{getCssVarName('transition-duration')});
   outline: none;
   border-bottom: 1px solid var(#{getCssVarName('border', 'color-light')});
   &.is-disabled {
@@ -27,7 +27,7 @@
   }
   .header-angle {
     transform: rotate(-90deg);
-    transition: transform var(--zg-transition-duration);
+    transition: transform var(#{getCssVarName('transition-duration')});
   }
 }
 .zg-collapse-item__content {
@@ -44,7 +44,7 @@
 .collapse-transition-enter-active,
 .collapse-transition-leave-active {
   transition:
-    var(--zg-transition-duration) max-height ease-in-out,
-    var(--zg-transition-duration) padding-top ease-in-out,
-    var(--zg-transition-duration) padding-bottom ease-in-out;
+    var(#{getCssVarName('transition-duration')}) max-height ease-in-out,
+    var(#{getCssVarName('transition-duration')}) padding-top ease-in-out,
+    var(#{getCssVarName('transition-duration')}) padding-bottom ease-in-out;
 }

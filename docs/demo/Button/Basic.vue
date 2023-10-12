@@ -3,9 +3,9 @@ import ZgButton from '@/components/Button'
 </script>
 <template>
   <div class="basic block">
-    <ZgButton> hello </ZgButton>
+    <ZgButton loading> hello </ZgButton>
     <ZgButton type="primary"> Primary </ZgButton>
-    <ZgButton type="success"> Success </ZgButton>
+    <ZgButton type="success" loading> Success </ZgButton>
     <ZgButton type="warning"> Warning </ZgButton>
     <ZgButton type="danger"> Danger </ZgButton>
     <ZgButton type="info"> Info </ZgButton>

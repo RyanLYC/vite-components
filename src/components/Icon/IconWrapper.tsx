@@ -25,12 +25,7 @@ export default defineComponent({
     }))
 
     return () => (
-      <span
-        tabindex={iconTabIndex.value}
-        role="img"
-        class={svgClasses.value}
-        style={svgStyle.value}
-      >
+      <span tabindex={iconTabIndex.value} role="img" class={svgClasses.value} style={svgStyle.value}>
         {slots.default && slots.default()}
       </span>
     )

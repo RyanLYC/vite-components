@@ -3,6 +3,7 @@ export const iconNames = [
   'ArrowUpOutlined',
   'CheckCircleFilled',
   'CloseCircleFilled',
+  'CloseCircleOutlined',
   'DownOutlined',
   'ExclamationCircleFilled',
   'InfoCircleFilled',

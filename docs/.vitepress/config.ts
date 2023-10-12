@@ -125,6 +125,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'Button', link: 'button' },
         { text: 'Icon', link: 'icon' },
         { text: 'Collapse', link: 'collapse' },
+        { text: 'Alert', link: 'alert' },
 
       ]
     },

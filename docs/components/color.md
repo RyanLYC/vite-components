@@ -16,7 +16,7 @@
 </div>
 
  <script setup>
-  import DemoColorBox from '../demo/color/DemoColorBox.vue' 
+  import DemoColorBox from '../demo/Color/DemoColorBox.vue' 
 </script>
 <style>
 .box {

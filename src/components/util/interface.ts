@@ -1,10 +1,5 @@
 import type { ObjectDirective, Plugin } from 'vue'
-import {
-  CheckCircleFilled,
-  CloseCircleFilled,
-  ExclamationCircleFilled,
-  InfoCircleFilled,
-} from '../Icon'
+import { CheckCircleFilled, CloseCircleFilled, ExclamationCircleFilled, InfoCircleFilled } from '../Icon'
 
 export type ZObjectDirective = ObjectDirective & {
   name: string

@@ -26,3 +26,8 @@ description: Button 组件的文档
 | icon        | icon component                         | `string`                                                         | —       |
 | autofocus   | same as native button's `autofocus`    | `boolean`                                                        | false   |
 | native-type | same as native button's `type`         | `enum` - `'button'\| 'submit'\| 'reset'`                         | button  |
+
+### Button Slots
+| 插槽名  | Description    |
+| ------- | -------------- |
+| default | 自定义默认内容 |

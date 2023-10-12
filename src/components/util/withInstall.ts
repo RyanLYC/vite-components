@@ -1,11 +1,7 @@
 import type { Component, Plugin, App } from 'vue'
 import type { ZObjectDirective } from './interface'
 
-export function withInstall<T extends Plugin>(
-  main: T,
-  extra?: Record<string, Component>,
-  directives?: ZObjectDirective[]
-): T {
+export function withInstall<T extends Plugin>(main: T, extra?: Record<string, Component>, directives?: ZObjectDirective[]): T {
   const _main = main as any
   _main.install = (app: App) => {
     for (const comp of [main, ...Object.values(extra ?? {})]) {

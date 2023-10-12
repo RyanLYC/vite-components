@@ -1,0 +1,65 @@
+.zg-alert {
+  --zg-alert-text-color: var(--zg-color-info);
+  --zg-alert-bg-color: var(--zg-color-info-light-9);
+  --zg-alert-border-color: var(--zg-color-info);
+
+  position: relative;
+  color: var(--zg-text-color);
+  padding: 6px 10px;
+  // 根据状态改变
+  color: var(--zg-alert-text-color);
+  line-height: 24px;
+  // 根据状态改变
+  background-color: var(--zg-alert-bg-color);
+  border: var(#{getCssVarName('border')});
+  // 根据状态改变
+  border-color: var(--zg-alert-border-color);
+  border-radius: var(#{getCssVarName('border', 'radius-base')});
+  display: flex;
+
+  &-center {
+    justify-content: center;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    font-size: var(#{getCssVarName('font', 'size-large')});
+  }
+  &__content {
+    display: table-cell;
+  }
+  &__title {
+    font-size: var(#{getCssVarName('font', 'size-base')});
+    margin: 5px 0 0;
+  }
+  &__description {
+    font-size: var(#{getCssVarName('font', 'size-small')});
+    margin: 5px 0 0;
+  }
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+    color: var(#{getCssVarName('text', 'color-regular')});
+    cursor: pointer;
+    font-size: var(#{getCssVarName('font', 'size-medium')});
+  }
+
+  &-fade-expand-leave-active {
+    transition: all var(#{getCssVarName('transition-duration', 'fast')}) ease-out;
+  }
+  &-fade-expand-leave-to {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+@each $val in (success, warning, info, danger) {
+  .zg-alert--#{$val} {
+    --zg-alert-text-color: var(--zg-color-#{$val});
+    --zg-alert-bg-color: var(--zg-color-#{$val}-light-9);
+    --zg-alert-border-color: var(--zg-color-#{$val});
+  }
+}

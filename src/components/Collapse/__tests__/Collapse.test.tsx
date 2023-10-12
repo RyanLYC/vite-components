@@ -5,10 +5,7 @@ import ZgCollapseItem from '../../CollapseItem/index'
 
 const onChange = vi.fn()
 let wrapper: VueWrapper
-let headers: DOMWrapper<Element>[],
-  contents: DOMWrapper<Element>[],
-  disabledHeader: DOMWrapper<Element>,
-  disabledContent: DOMWrapper<Element>
+let headers: DOMWrapper<Element>[], contents: DOMWrapper<Element>[], disabledHeader: DOMWrapper<Element>, disabledContent: DOMWrapper<Element>
 
 describe('Collapse.vue', () => {
   beforeAll(() => {
