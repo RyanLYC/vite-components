@@ -1,8 +1,6 @@
 :root {
   /** 主色  辅助色 */
-  @each $val,
-    $color in (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399)
-  {
+  @each $val, $color in (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399) {
     --zg-color-#{$val}: #{$color};
 
     @each $index, $weight in (3: 30%, 5: 50%, 7: 70%, 8: 80%, 9: 90%) {
@@ -57,8 +55,7 @@
   --zg-font-size-medium: 16px;
   --zg-font-size-large: 18px;
   --zg-font-size-extra-large: 20px;
-  --zg-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
-    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+  --zg-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
   --zg-font-weight-primary: 500;
   --zg-font-line-height-primary: 24px;
 
