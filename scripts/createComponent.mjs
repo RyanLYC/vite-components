@@ -56,6 +56,11 @@ if (pathExistsSync(componentPath)) {
 
   // style
   outputFileSync(join(componentPath, `style.scss`), '')
+  // 自动导入组件的 style.scss 文件
+  const stylePath = join(rootPath, 'src/styles/index.scss')
+  let styleRes = fs.readFileSync(stylePath, { encoding: 'utf-8' })
+
+  fs.writeFileSync(styleRes, styleRes + `@import '../components/${componentName}/style.scss';`)
 
   // types.ts
   outputFileSync(join(componentPath, `types.ts`), '')
@@ -71,19 +76,13 @@ if (pathExistsSync(componentPath)) {
 
     export default ZgCOMPONENT_NAME
     `
-  outputFileSync(
-    join(componentPath, 'index.ts'),
-    indexTpl.replaceAll('COMPONENT_NAME', componentName)
-  )
+  outputFileSync(join(componentPath, 'index.ts'), indexTpl.replaceAll('COMPONENT_NAME', componentName))
 
   // 自动导出引入
   const indexPath = resolve(srcComponentsPath, 'index.ts')
   let res = fs.readFileSync(indexPath, { encoding: 'utf-8' })
 
-  res = res.replace(
-    '// 引入组件',
-    `// 引入组件\nimport Zg${componentName} from './${componentName}'`
-  )
+  res = res.replace('// 引入组件', `// 引入组件\nimport Zg${componentName} from './${componentName}'`)
   res = res.replace(']', `, Zg${componentName}]`)
   res = res.replace(', install', `, Zg${componentName}, install`)
 
@@ -95,10 +94,7 @@ if (pathExistsSync(componentPath)) {
 
   dtsRes = `import Zg${componentName} from './${componentName}'\n` + dtsRes
 
-  dtsRes = dtsRes.replace(
-    'GlobalComponents {',
-    `GlobalComponents {\n    Zg${componentName}: typeof Zg${componentName}`
-  )
+  dtsRes = dtsRes.replace('GlobalComponents {', `GlobalComponents {\n    Zg${componentName}: typeof Zg${componentName}`)
 
   fs.writeFileSync(dtsPath, dtsRes)
 }
