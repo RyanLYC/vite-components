@@ -60,7 +60,7 @@ if (pathExistsSync(componentPath)) {
   const stylePath = join(rootPath, 'src/styles/index.scss')
   let styleRes = fs.readFileSync(stylePath, { encoding: 'utf-8' })
 
-  fs.writeFileSync(styleRes, styleRes + `@import '../components/${componentName}/style.scss';`)
+  fs.writeFileSync(stylePath, styleRes + `@import '../components/${componentName}/style.scss';`)
 
   // types.ts
   outputFileSync(join(componentPath, `types.ts`), '')
