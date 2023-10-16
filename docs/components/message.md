@@ -6,7 +6,7 @@ description: Alert 组件的文档
 # Message 提示
 用于页面中展示重要的提示信息。
 
-## 基础用法 666 
+## 基础用法  
 
 <preview path="../demo/Message/Basic.vue" title="基础用法" description="Message 组件的基础用法"></preview>
 
