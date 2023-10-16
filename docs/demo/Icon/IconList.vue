@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import * as Icons from '@/components/Icon'
 import { iconNames } from './icons'
+import { createMessage } from '@/components/Message/CreateMessage'
 
 type IconType = keyof typeof Icons
 
@@ -9,6 +10,7 @@ const iconsArray = iconNames as IconType[]
 const copyItem = (name: string) => {
   if (navigator.clipboard) {
     navigator.clipboard.writeText(`<${name}/>`)
+    createMessage({ message: `<${name}/>`, type: 'success', showIcon: true })
   }
 }
 </script>
