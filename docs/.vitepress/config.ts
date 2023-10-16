@@ -134,7 +134,10 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
     {
       text: 'Feedback 反馈组件',
       collapsed: false,
-      items: [{ text: 'Alert', link: 'alert' }],
+      items: [
+        { text: 'Alert', link: 'alert' },
+        { text: 'Message', link: 'message' },
+      ],
     },
   ]
 }

@@ -3,6 +3,7 @@ import { type App } from 'vue'
 import '../styles/index.scss'
 
 // 引入组件
+import { createMessage } from './Message/CreateMessage'
 import ZgAlert from './Alert'
 import ZgCollapseItem from './CollapseItem'
 import ZgCollapse from './Collapse'
@@ -19,7 +20,7 @@ const install = (app: App) => {
 }
 
 // 局部注册
-export { ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, install }
+export { ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, createMessage, install }
 
 export default {
   install,

@@ -4,18 +4,16 @@ import { CloseCircleOutlined } from '../Icon'
 import { iconComponentsMap } from '../util/interface'
 
 export default defineComponent({
-  name: 'FAlert',
+  name: 'ZgAlert',
   props: alertProps,
   emits: ['close'],
   setup(props, ctx) {
     const visible = ref(true)
-    // const descriptionClass = computed(() => ['zg-alert_description', props.showIcon && !props.center && 'zg-alert-icon-padding'])
-
     const renderIcon = () => {
       return ctx.slots.icon ? ctx.slots.icon() : iconComponentsMap[props.type]?.()
     }
 
-    function handleCloseClick(event: MouseEvent) {
+    function handleCloseClick() {
       visible.value = false
       ctx.emit('close')
     }

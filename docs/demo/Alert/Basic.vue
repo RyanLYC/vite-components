@@ -6,6 +6,9 @@ import ZgAlert from '@/components/Alert'
     <ZgAlert title="常规信息提示内容" showIcon />
   </div>
   <div class="block">
+    <ZgAlert title="常规信息提示内容" showIcon closable />
+  </div>
+  <div class="block">
     <ZgAlert title="常规信息提示内容" type="success" description="这是个描述" />
   </div>
 

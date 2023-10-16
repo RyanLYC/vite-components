@@ -1,0 +1,56 @@
+.zg-message {
+  --zg-message-color: var(--zg-color-info);
+  --zg-message-bg-color: var(--zg-color-info-light-9);
+  --zg-message-border-color: var(--zg-color-info);
+
+  width: fit-content;
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
+  border: var(#{getCssVarName('border')});
+  // 根据状态改变
+  border-color: var(--zg-message-border-color);
+  border-radius: var(#{getCssVarName('border', 'radius-base')});
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  // 根据状态改变
+  background-color: var(--zg-message-bg-color);
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  transition:
+    top var(--zg-transition-duration),
+    opacity var(--zg-transition-duration),
+    transform var(--zg-transition-duration);
+  &__content {
+    // 根据状态改变
+    color: var(--zg-message-color);
+    overflow-wrap: anywhere;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    color: var(--zg-message-color);
+  }
+  &__close {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--zg-message-color);
+  }
+}
+
+.message-transition-enter-from,
+.message-transition-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
+
+@each $val in (success, warning, info, danger) {
+  .zg-message--#{$val} {
+    --zg-message-color: var(--zg-color-#{$val});
+    --zg-message-bg-color: var(--zg-color-#{$val}-light-9);
+    --zg-message-border-color: var(--zg-color-#{$val});
+  }
+}
