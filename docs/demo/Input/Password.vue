@@ -4,6 +4,5 @@ import { ref } from 'vue'
 const value = ref('')
 </script>
 <template>
-  <ZgInput v-model="value" placeholder="基础文本框，请输入" />
-  <span>{{ value }}</span>
+  <ZgInput v-model="value" placeholder="密码文本框，可以切换" showPassword />
 </template>

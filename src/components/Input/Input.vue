@@ -40,9 +40,9 @@
           @blur="handleBlur"
         />
         <!-- suffix slot -->
-        <span v-if="$slots.suffix || showClear || showPasswordArea" class="zg-input__suffix">
+        <span v-if="$slots.suffix || showClear || showPasswordArea" class="zg-input__suffix" @click="keepFocus">
           <slot name="suffix" />
-          <CloseCircleFilled v-if="showClear" class="zg-input__clear" @click="clear" />
+          <CloseCircleFilled v-if="showClear" class="zg-input__clear" @click="clear" @mousedown.prevent="NOOP" />
           <EyeOutlined v-if="showPasswordArea && passwordVisible" class="zg-input__password" @click="togglePasswordVisible" />
           <EyeInvisibleOutlined v-if="showPasswordArea && !passwordVisible" class="zg-input__password" @click="togglePasswordVisible" />
         </span>
@@ -75,7 +75,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, useAttrs, type Ref } from 'vue'
+import { computed, ref, useAttrs, type Ref, nextTick } from 'vue'
 import type { InputEmits, InputProps } from './types'
 import { CloseCircleFilled, EyeOutlined, EyeInvisibleOutlined } from '../Icon'
 
@@ -108,7 +108,6 @@ const handleFocus = (event: FocusEvent) => {
   emits('focus', event)
 }
 const clear = () => {
-  console.log('clear triggered')
   innerValue.value = ''
   emits('update:modelValue', '')
   emits('clear')
@@ -122,11 +121,15 @@ const handleChange = () => {
   emits('change', innerValue.value)
 }
 const handleBlur = (event: FocusEvent) => {
-  console.log('blur triggered')
   isFocus.value = false
   emits('blur', event)
 }
 defineExpose({
   ref: inputRef,
 })
+const NOOP = () => {}
+const keepFocus = async () => {
+  await nextTick()
+  inputRef.value.focus()
+}
 </script>
