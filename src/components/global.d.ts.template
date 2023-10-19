@@ -1,3 +1,4 @@
+import ZgInput from './Input'
 import ZgMessage from './Message'
 import ZgAlert from './Alert'
 import ZgCollapseItem from './CollapseItem'
@@ -6,6 +7,7 @@ import ZgButton from './Button'
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ZgInput: typeof ZgInput
     ZgMessage: typeof ZgMessage
     ZgAlert: typeof ZgAlert
     ZgCollapseItem: typeof ZgCollapseItem

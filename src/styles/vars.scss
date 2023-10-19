@@ -59,6 +59,11 @@
   --zg-font-weight-primary: 500;
   --zg-font-line-height-primary: 24px;
 
+  /** 组件高度 */
+  --zg-component-size-large: 40px;
+  --zg-component-size: 32px;
+  --zg-component-size-small: 24px;
+
   /** disabled */
   --zg-disabled-bg-color: var(--zg-fill-color-light);
   --zg-disabled-text-color: var(--zg-text-color-placeholder);

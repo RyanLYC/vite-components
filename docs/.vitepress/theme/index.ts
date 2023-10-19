@@ -5,16 +5,19 @@ import DefaultTheme from 'vitepress/theme'
 import { ElementPlusContainer } from '@vitepress-demo-preview/component'
 
 import '@vitepress-demo-preview/component/dist/style.css'
-import '../../../src/styles/index.scss'
+
+import zgui from '../../../src/components/'
+import '@/styles/index.scss'
 
 import * as Icons from '../../../src/components/Icon'
-import '../../../src/components/Icon/style/index.scss'
+import '@/components/Icon/style/index.scss'
 
 import './custom.css'
 
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
+    app.use(zgui)
     app.component('demo-preview', ElementPlusContainer)
     Object.keys(Icons).forEach((iconName) => {
       app.component(iconName, Icons[iconName])

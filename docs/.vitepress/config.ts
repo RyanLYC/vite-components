@@ -127,6 +127,11 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
+      text: 'Form 表单组件',
+      collapsed: false,
+      items: [{ text: 'Input', link: 'input' }],
+    },
+    {
       text: 'Data 数据展示',
       collapsed: false,
       items: [{ text: 'Collapse', link: 'collapse' }],

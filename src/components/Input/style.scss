@@ -1,0 +1,198 @@
+.zg-input {
+  position: relative;
+  font-size: var(#{getCssVarName('font', 'size-base')});
+  display: inline-flex;
+  width: 100%;
+  line-height: var(#{getCssVarName('component', 'size')});
+  box-sizing: border-box;
+  vertical-align: middle;
+  &.is-disabled {
+    cursor: not-allowed;
+    .zg-input__wrapper {
+      background-color: var(--zg-disabled-bg-color);
+      box-shadow: 0 0 0 1px var(--zg-disabled-border-color) inset;
+    }
+    .zg-input__inner {
+      color: var(--zg-disabled-text-color);
+      -webkit-text-fill-color: var(--zg-disabled-text-color);
+      cursor: not-allowed;
+    }
+    .zg-textarea__inner {
+      background-color: var(--zg-disabled-bg-color);
+      box-shadow: 0 0 0 1px var(--zg-disabled-border-color) inset;
+      color: var(--zg-disabled-text-color);
+      -webkit-text-fill-color: var(--zg-disabled-text-color);
+      cursor: not-allowed;
+    }
+  }
+  &.is-prepend {
+    > .zg-input__wrapper {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  &.is-append {
+    > .zg-input__wrapper {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  .zg-input__wrapper {
+    display: inline-flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 11px;
+    background-color: var(--zg-fill-color-blank);
+    background-image: none;
+    border-radius: var(--zg-border-radius-base);
+    transition: var(--zg-transition-box-shadow);
+    box-shadow: 0 0 0 1px var(--zg-border-color) inset;
+    &:hover {
+      box-shadow: 0 0 0 1px var(--zg-border-color-hover) inset;
+    }
+    &.is-focus {
+      box-shadow: 0 0 0 1px var(--zg-color-primary) inset;
+    }
+    .zg-input__inner {
+      --zg-input-inner-height: calc(var(--zg-component-size) - 2px);
+      width: 100%;
+      flex-grow: 1;
+      -webkit-appearance: none;
+      color: var(--zg-text-color-regular);
+      font-size: inherit;
+      height: var(--zg-input-inner-height);
+      line-height: var(--zg-input-inner-height);
+      padding: 0;
+      outline: none;
+      border: none;
+      background: none;
+      box-sizing: border-box;
+      &::placeholder {
+        color: var(--zg-text-color-placeholder);
+      }
+    }
+    .zg-input__clear,
+    .zg-input__password {
+      color: var(#{getCssVarName('text', 'color-placeholder')});
+      font-size: 15px;
+      cursor: pointer;
+      &:hover {
+        color: var(#{getCssVarName('text', 'color-secondary')});
+      }
+    }
+  }
+  .zg-input__prefix,
+  .zg-input__suffix {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    height: 100%;
+    text-align: center;
+    color: var(--zg-text-color-placeholder);
+    transition: all var(--zg-transition-duration);
+  }
+  .zg-input__prefix {
+    > :first-child {
+      margin-left: 0px !important;
+    }
+    > :last-child {
+      margin-right: 8px !important;
+    }
+  }
+  .zg-input__suffix {
+    > :first-child {
+      margin-left: 8px !important;
+    }
+    > :last-child {
+      margin-right: 0px !important;
+    }
+  }
+}
+
+.zg-input--large {
+  font-size: 14px;
+  .zg-input__wrapper {
+    padding: 1px 16px;
+    .zg-input__inner {
+      --zg-input-inner-height: calc(var(--zg-component-size-large) - 2px);
+    }
+  }
+}
+.zg-input--small {
+  font-size: 12px;
+  .zg-input__wrapper {
+    padding: 1px 7px;
+    .zg-input__inner {
+      --zg-input-inner-height: calc(var(--zg-component-size-small) - 2px);
+    }
+  }
+}
+
+.zg-input__prepend,
+.zg-input__append {
+  background-color: var(--zg-fill-color-light);
+  color: var(--zg-color-info);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  border-radius: var(#{getCssVarName('border', 'radius-base')});
+  padding: 0 20px;
+  white-space: nowrap;
+}
+.zg-input__prepend {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow:
+    1px 0 0 0 var(--zg-border-color) inset,
+    0 1px 0 0 var(--zg-border-color) inset,
+    0 -1px 0 0 var(--zg-border-color) inset;
+}
+.zg-input__append {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow:
+    0 1px 0 0 var(--zg-border-color) inset,
+    0 -1px 0 0 var(--zg-border-color) inset,
+    -1px 0 0 0 var(--zg-border-color) inset;
+}
+
+.zg-input--textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: var(--zg-font-size-base);
+  .zg-textarea__wrapper {
+    position: relative;
+    display: block;
+    resize: vertical;
+    padding: 5px 11px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--zg-text-color-regular);
+    background-color: var(--zg-fill-color-blank);
+    background-image: none;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0 1px var(--zg-border-color) inset;
+    border-radius: var(--zg-border-radius-base);
+    transition: var(--zg-transition-box-shadow);
+    border: none;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px var(--zg-color-primary) inset;
+    }
+    &::placeholder {
+      color: var(--zg-text-color-placeholder);
+    }
+  }
+}
