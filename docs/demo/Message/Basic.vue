@@ -10,7 +10,6 @@ let index = 0
 const crtMsg = () => {
   const instance = createMessage({
     message: '这个常规信息！',
-    duration: 0,
     type: types[index % 5] as any,
     offset: 10,
     showIcon: true,
@@ -19,7 +18,6 @@ const crtMsg = () => {
 
   const instance2 = createMessage({
     message: h('p', null, [h('span', null, 'Message can be '), h('i', { style: 'color: teal' }, 'VNode')]),
-    duration: 0,
     type: types[index % 5] as any,
     offset: 10,
     showIcon: true,

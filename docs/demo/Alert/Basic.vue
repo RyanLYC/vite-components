@@ -3,25 +3,18 @@ import ZgAlert from '@/components/Alert'
 </script>
 <template>
   <div class="block">
-    <ZgAlert title="常规信息提示内容" showIcon />
-  </div>
-  <div class="block">
-    <ZgAlert title="常规信息提示内容" showIcon closable />
-  </div>
-  <div class="block">
-    <ZgAlert title="常规信息提示内容" type="success" description="这是个描述" />
-  </div>
-
-  <div class="block">
-    <ZgAlert title="常规信息提示内容" type="warning" showIcon description="这是个描述" center closable />
-  </div>
-  <div class="block">
-    <ZgAlert title="常规信息提示内容" type="error" showIcon closable description="这是个描述" />
+    <ZgAlert class="alert" title="success alert" type="success" />
+    <ZgAlert class="alert" title="info alert" type="info" />
+    <ZgAlert class="alert" title="warning alert" type="warning" />
+    <ZgAlert class="alert" title="error alert" type="error" />
   </div>
 </template>
 <style>
 .block {
   margin-bottom: 10px;
   width: 60%;
+  .alert {
+    margin-bottom: 10px;
+  }
 }
 </style>

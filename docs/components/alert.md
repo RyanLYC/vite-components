@@ -13,6 +13,18 @@ Alert 组件提供四种类型，由 type 属性指定，默认值为 info。
 
 <preview path="../demo/Alert/Basic.vue" title="基础用法" description="Alert 组件的基础用法"></preview>
 
+## 显示类型图标
+使用`showIcon`属性
+
+<preview path="../demo/Alert/Icon.vue" title="基础用法" description="Alert 组件的基础用法"></preview>
+
+## 描述文本
+使用`description`属性
+
+<preview path="../demo/Alert/Description.vue" title="基础用法" description="Alert 组件的基础用法"></preview>
+
+
+
 ### Alert Attributes
 
 | Name        | Description      | Type                                                 | Default |
@@ -20,8 +32,8 @@ Alert 组件提供四种类型，由 type 属性指定，默认值为 info。
 | title       | Alert 标题。     | `string`                                             | —       |
 | type        | Alert 类型。     | `enum` - ` 'success'\| 'warning'\| 'error'\| 'info'` | info    |
 | description | 描述性文本       | `string`                                             | —       |
-| closable    | 是否可以关闭     | `boolean`                                            | false   |
-| show-icon   | 是否显示类型图标 | `boolean`                                            | false   |
+| closable    | 是否可以关闭     | `boolean`                                            | true    |
+| showIcon    | 是否显示类型图标 | `boolean`                                            | false   |
 | center      | 文字是否居中     | `boolean`                                            | false   |
 
 

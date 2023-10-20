@@ -14,20 +14,20 @@ description: Button 组件的文档
 
 ### Button Attributes
 
-| Name        | Description                            | Type                                                             | Default |
-| ----------- | -------------------------------------- | ---------------------------------------------------------------- | ------- |
-| size        | button size                            | `enum` - `'large'\| 'small'`                                     | —       |
-| type        | button type                            | `enum` - `'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | —       |
-| plain       | determine whether it's a plain button  | `boolean`                                                        | false   |
-| round       | determine whether it's a round button  | `boolean`                                                        | false   |
-| circle      | determine whether it's a circle button | `boolean`                                                        | false   |
-| loading     | determine whether it's loading         | `boolean`                                                        | false   |
-| disabled    | disable the button                     | `boolean`                                                        | false   |
-| icon        | icon component                         | `string`                                                         | —       |
-| autofocus   | same as native button's `autofocus`    | `boolean`                                                        | false   |
-| native-type | same as native button's `type`         | `enum` - `'button'\| 'submit'\| 'reset'`                         | button  |
+| Name        | Description         | Type                                                    | Default |
+| ----------- | ------------------- | ------------------------------------------------------- | ------- |
+| size        | 尺寸                | `'large'\| 'small'`                                     | —       |
+| type        | 类型                | `'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | —       |
+| plain       | 是否为朴素按钮      | `boolean`                                               | false   |
+| round       | 是否为圆角按钮      | `boolean`                                               | false   |
+| circle      | 是否为圆形按钮      | `boolean`                                               | false   |
+| loading     | 是否为加载中状态    | `boolean`                                               | false   |
+| disabled    | 按钮是否为禁用状态  | `boolean`                                               | false   |
+| autofocus   | 原生 autofocus 属性 | `boolean`                                               | false   |
+| native-type | 原生 type 属性      | `'button'\| 'submit'\| 'reset'`                         | button  |
 
 ### Button Slots
 | 插槽名  | Description    |
 | ------- | -------------- |
 | default | 自定义默认内容 |
+| icon    | 自定义图标组件 |

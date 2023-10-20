@@ -19,7 +19,10 @@ export const alertProps = {
   },
   description: String,
   showIcon: Boolean,
-  closable: Boolean,
+  closable: {
+    type: Boolean,
+    default: true,
+  },
   center: Boolean,
 }
 
