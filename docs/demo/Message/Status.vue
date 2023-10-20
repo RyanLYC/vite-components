@@ -5,13 +5,14 @@
 </template>
 <script lang="ts" setup>
 import { ZgButton, createMessage } from '@/components/index'
+import type { FeedbackType } from '@/components/util/interface'
 
 const types = ['success', 'info', 'warning', 'error']
 
 const crtMsg = (type: string) => {
   createMessage({
     message: '这个常规信息！',
-    type,
+    type: type as FeedbackType,
     showIcon: true,
     showClose: true,
   })

@@ -1,5 +1,5 @@
 import type { ExtractPublicPropTypes, PropType } from 'vue'
-import { iconComponentsMap } from '../util/interface'
+import { type FeedbackType } from '../util/interface'
 
 // export interface AlertProps {
 //   title?: string
@@ -14,7 +14,7 @@ import { iconComponentsMap } from '../util/interface'
 export const alertProps = {
   title: String,
   type: {
-    type: String as PropType<keyof typeof iconComponentsMap>,
+    type: String as PropType<FeedbackType>,
     default: 'info',
   },
   description: String,

@@ -13,3 +13,5 @@ export const iconComponentsMap = {
   error: CloseCircleFilled,
   warning: ExclamationCircleFilled,
 }
+
+export type FeedbackType = keyof typeof iconComponentsMap

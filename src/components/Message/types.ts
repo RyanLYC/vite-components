@@ -1,11 +1,12 @@
 import type { ComponentInternalInstance, VNode } from 'vue'
+import type { FeedbackType } from '../util/interface'
 
 export interface MessageProps {
   message?: string | VNode
   duration?: number
   showClose?: boolean
   showIcon?: boolean
-  type?: 'success' | 'info' | 'warning' | 'error'
+  type?: FeedbackType
   onDestory: () => void
   id: string
   zIndex: number
