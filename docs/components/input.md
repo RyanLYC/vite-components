@@ -55,6 +55,7 @@ description: Input 组件的文档
 | autofocus             | 原生属性，自动获取焦点                            | `boolean`                | false   |
 | autocomplete          | 原生 autocomplete 属性                            | `string`                 | off     |
 | form                  | 原生 form 属性                                    | `string`                 | —       |
+| size                  | 尺寸                                              | `'large'\| 'small'`      | —       |
 
 
 ### Input Events

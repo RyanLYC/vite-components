@@ -1,3 +1,4 @@
+import ZgSwitch from './Switch'
 import ZgInput from './Input'
 import ZgMessage from './Message'
 import ZgAlert from './Alert'
@@ -7,6 +8,7 @@ import ZgButton from './Button'
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ZgSwitch: typeof ZgSwitch
     ZgInput: typeof ZgInput
     ZgMessage: typeof ZgMessage
     ZgAlert: typeof ZgAlert
@@ -26,4 +28,5 @@ declare module 'vite-components-last' {
   }
 
   export type FeedbackType = keyof typeof iconComponentsMap
+  export type SwitchValueType = boolean | string | number
 }

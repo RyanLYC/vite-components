@@ -129,7 +129,10 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
     {
       text: 'Form 表单组件',
       collapsed: false,
-      items: [{ text: 'Input', link: 'input' }],
+      items: [
+        { text: 'Input', link: 'input' },
+        { text: 'Switch', link: 'switch' },
+      ],
     },
     {
       text: 'Data 数据展示',
