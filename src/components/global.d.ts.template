@@ -1,3 +1,4 @@
+import ZgCard from './Card'
 import ZgSwitch from './Switch'
 import ZgInput from './Input'
 import ZgMessage from './Message'
@@ -8,6 +9,7 @@ import ZgButton from './Button'
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ZgCard: typeof ZgCard
     ZgSwitch: typeof ZgSwitch
     ZgInput: typeof ZgInput
     ZgMessage: typeof ZgMessage

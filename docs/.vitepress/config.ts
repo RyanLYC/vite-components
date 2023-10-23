@@ -137,7 +137,10 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
     {
       text: 'Data 数据展示',
       collapsed: false,
-      items: [{ text: 'Collapse', link: 'collapse' }],
+      items: [
+        { text: 'Collapse', link: 'collapse' },
+        { text: 'Card', link: 'card' },
+      ],
     },
     {
       text: 'Feedback 反馈组件',

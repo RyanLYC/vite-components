@@ -50,8 +50,9 @@
     </div>
     <div class="text-wrapper">
       <div class="demo-color-box" v-for="(value, key) in others" :key="key" :style="{ background: '#606266' }" @click="tips(`--zg-${key}`)">
-        <div>{{ value }}</div>
-        <div>{{ key }}</div>
+        <span>{{ key }}</span>
+        =
+        <span>{{ value }}</span>
       </div>
     </div>
   </div>
@@ -105,15 +106,15 @@ const bgColors = {
 const others = {
   'border-width': '1px',
   'border-style': 'solid',
-  'border-color-hover': '--zg-text-color-disabled',
-  border: '--zg-border-width --zg-border-style --zg-border-color',
+  'border-color-hover': 'text-color-disabled',
+  border: 'border-width border-style border-color',
   'border-radius-base': '4px',
   'border-radius-small': '2px',
   'border-radius-round': '20px',
   'border-radius-circle': '100px',
-  'disabled-bg-color': '--zg-fill-color-light',
-  'disabled-text-color': '--zg-text-color-placeholder',
-  'disabled-border-color': '--zg-border-color-light',
+  'disabled-bg-color': 'fill-color-light',
+  'disabled-text-color': 'text-color-placeholder',
+  'disabled-border-color': 'border-color-light',
   'transition-duration': '0.3s',
   'transition-duration-fast': '0.2s',
   'component-size-large': '40px',

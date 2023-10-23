@@ -1,0 +1,43 @@
+.zg-card {
+  --zg-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  --zg-card-header-padding: 10px 20px;
+  --zg-card-body-padding: 10px 20px;
+
+  color: var(--zg-text-color-primary);
+  background-color: var(--zg-bg-color);
+  border: var(--zg-border);
+  border-color: transparent;
+  border-radius: var(--zg-border-radius-base);
+  &.is-bordered {
+    border-color: var(--zg-border-color);
+  }
+  &__header {
+    box-sizing: border-box;
+    padding: var(--zg-card-header-padding);
+    font-weight: var(--zg-font-weight-primary);
+    font-size: var(var(--zg-ont-size-medium));
+    border-bottom: var(--zg-border-width) var(--zg-border-style) transparent;
+    border-bottom-color: var(--zg-border-color-light);
+    &.no-divider {
+      padding-bottom: 0;
+      border-bottom-color: transparent;
+    }
+  }
+  &__body {
+    padding: var(--zg-card-body-padding);
+    color: var(--f-font-color-base);
+    font-size: var(--zg-font-size-base);
+  }
+  &-shadow--always {
+    box-shadow: var(--zg-box-shadow-light);
+  }
+  &-shadow--never {
+    box-shadow: none;
+  }
+  &-shadow--hover {
+    box-shadow: none;
+    &:hover {
+      box-shadow: var(--zg-box-shadow-light);
+    }
+  }
+}
