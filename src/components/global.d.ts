@@ -19,16 +19,3 @@ declare module 'vue' {
     ZgButton: typeof ZgButton
   }
 }
-
-declare module 'vite-components-last' {
-  export type NameType = string | number
-  export const iconComponentsMap = {
-    info: InfoCircleFilled,
-    success: CheckCircleFilled,
-    error: CloseCircleFilled,
-    warning: ExclamationCircleFilled,
-  }
-
-  export type FeedbackType = keyof typeof iconComponentsMap
-  export type SwitchValueType = boolean | string | number
-}

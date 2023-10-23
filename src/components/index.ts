@@ -28,3 +28,12 @@ export { ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, createMessage, ZgInput, 
 export default {
   install,
 }
+// 需要导出的类型
+//button
+export { type ButtonType, type NativeType } from './Button/types'
+// alert message
+export { iconComponentsMap, type FeedbackType } from './util/interface'
+// switch
+export { type SwitchValueType } from './Switch/types'
+// collapse
+export { type NameType } from './Collapse/types'

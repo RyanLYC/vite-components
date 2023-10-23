@@ -107,7 +107,7 @@ module.exports = {
     "gen": "node scripts/createComponent.mjs",
 ```
 1. 创建组件模版
-2. global.d.ts.template 中增加组件的全局定义
+2. global.d.ts 中增加组件的全局定义
 3. index.ts 中 自动引入
 
 ### 3.SVG Icons 动态生成icon 的 tsx文件

@@ -88,8 +88,8 @@ if (pathExistsSync(componentPath)) {
 
   fs.writeFileSync(indexPath, res)
 
-  //global.d.ts.template
-  const dtsPath = resolve(srcComponentsPath, 'global.d.ts.template')
+  //global.d.ts
+  const dtsPath = resolve(srcComponentsPath, 'global.d.ts')
   let dtsRes = fs.readFileSync(dtsPath, { encoding: 'utf-8' })
 
   dtsRes = `import Zg${componentName} from './${componentName}'\n` + dtsRes

@@ -3342,11 +3342,6 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-lodash-es@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
-
 lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
@@ -4863,12 +4858,12 @@ validate-npm-package-license@^3.0.1, validate-npm-package-license@^3.0.4:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-components-last@^0.0.25:
-  version "0.0.25"
-  resolved "https://registry.npmjs.org/vite-components-last/-/vite-components-last-0.0.25.tgz#b77f3a9469df67fea805d589ee133896a5d4ff9f"
-  integrity sha512-0k+9QWq4HAsssNhc+inm/26EFJ2IZU7tcTxR0Gwh0SiffjOF7TPrzB2ZYK0GSST6+c2bcK/5ViFPCEyDwl+UIg==
+vite-components-last@^0.0.26:
+  version "0.0.26"
+  resolved "https://registry.npmjs.org/vite-components-last/-/vite-components-last-0.0.26.tgz#1273455f13b6fe84a10354cc399dc535b0bc1b7f"
+  integrity sha512-nvOHJFrFxTWF0nDAdbAwnka9RMIsjXQbDgT/IoEyyGJXW62bY3MlbKKYhgDefz2sjEqLMR6l+nHBX5dR7Fu9qw==
   dependencies:
-    vite-components-last "^0.0.25"
+    vite-components-last "^0.0.26"
     vue "^3.3.4"
 
 vite-node@0.34.6:

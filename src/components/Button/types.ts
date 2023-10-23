@@ -37,4 +37,4 @@ export interface ButtonInstance {
 //   disabled: {
 //     type: Boolean
 //   },
-// }
+// } as const
