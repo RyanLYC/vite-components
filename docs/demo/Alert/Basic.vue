@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-import ZgAlert from '@/components/Alert'
-</script>
+<script lang="ts" setup></script>
 <template>
   <div class="block">
     <ZgAlert class="alert" title="success alert" type="success" />

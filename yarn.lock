@@ -4858,12 +4858,12 @@ validate-npm-package-license@^3.0.1, validate-npm-package-license@^3.0.4:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-components-last@^0.0.26:
-  version "0.0.26"
-  resolved "https://registry.npmjs.org/vite-components-last/-/vite-components-last-0.0.26.tgz#1273455f13b6fe84a10354cc399dc535b0bc1b7f"
-  integrity sha512-nvOHJFrFxTWF0nDAdbAwnka9RMIsjXQbDgT/IoEyyGJXW62bY3MlbKKYhgDefz2sjEqLMR6l+nHBX5dR7Fu9qw==
+vite-components-last@^0.0.27:
+  version "0.0.27"
+  resolved "https://registry.npmjs.org/vite-components-last/-/vite-components-last-0.0.27.tgz#9e2bf163a3dcd1f2c76552fe3467c6169bface63"
+  integrity sha512-tKLzITRB3e35ywKXiPJ31uAp0QAuuc2b7bHGTeNKX0yJDQ2e7xQxsWUOOVPh/GA8oBZ1UiZCk2eusX0qCU0YWA==
   dependencies:
-    vite-components-last "^0.0.26"
+    vite-components-last "^0.0.27"
     vue "^3.3.4"
 
 vite-node@0.34.6:

@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { createMessage } from '@/components/Message/CreateMessage'
+import { createMessage } from 'vite-components-last'
 
 const weights = [2, 3, 5, 7, 8, 9]
 const props = defineProps({

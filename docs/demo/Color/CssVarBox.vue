@@ -59,7 +59,7 @@
 </template>
 
 <script lang="ts" setup>
-import { createMessage } from '@/components/Message/CreateMessage'
+import { createMessage } from 'vite-components-last'
 
 const textColors = {
   'text-color-primary': '#303133',

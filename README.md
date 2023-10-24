@@ -1,3 +1,6 @@
+## 查看文档
+[文档]（https://ryanlyc.github.io/vite-components-last/components/button）
+
 ## 组件库使用
 ```shell
   yarn add vite-components-last -S

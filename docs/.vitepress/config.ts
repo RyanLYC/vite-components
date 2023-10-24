@@ -16,6 +16,7 @@ export default defineConfig({
   lastUpdated: true,
   /**URL中删除尾随的.html */
   cleanUrls: true,
+  base: '/vite-components-last/',
   vite: {
     // @ts-ignore
     plugins: [vueJsx()],

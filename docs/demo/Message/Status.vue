@@ -4,8 +4,8 @@
   </span>
 </template>
 <script lang="ts" setup>
-import { ZgButton, createMessage } from '@/components/index'
-import type { FeedbackType } from '@/components/util/interface'
+import { createMessage } from 'vite-components-last'
+import type { FeedbackType } from 'vite-components-last'
 
 const types = ['success', 'info', 'warning', 'error']
 

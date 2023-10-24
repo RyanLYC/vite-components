@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import ZgInput from '@/components/Input'
 const test = ref('')
 </script>
 <template>

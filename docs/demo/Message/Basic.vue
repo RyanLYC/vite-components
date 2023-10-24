@@ -2,7 +2,7 @@
   <ZgButton @click="crtMsg">message</ZgButton>
 </template>
 <script lang="ts" setup>
-import { ZgButton, createMessage } from '@/components/index'
+import { createMessage } from 'vite-components-last'
 import { h } from 'vue'
 
 const types = ['success', 'info', 'warning', 'error']

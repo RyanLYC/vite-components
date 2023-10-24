@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import * as Icons from '@/components/Icon'
+import * as Icons from 'vite-components-last/icon'
 import { iconNames } from './icons'
-import { createMessage } from '@/components/Message/CreateMessage'
+import { createMessage } from 'vite-components-last'
 
 type IconType = keyof typeof Icons
 

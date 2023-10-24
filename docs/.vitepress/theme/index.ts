@@ -6,11 +6,10 @@ import { ElementPlusContainer } from '@vitepress-demo-preview/component'
 
 import '@vitepress-demo-preview/component/dist/style.css'
 
-import zgui from '../../../src/components/'
-import '@/styles/index.scss'
-
-import * as Icons from '../../../src/components/Icon'
-import '@/components/Icon/style/index.scss'
+import zgui from 'vite-components-last'
+import 'vite-components-last/dist/style.css'
+// @ts-ignore
+import * as Icons from 'vite-components-last/icon'
 
 import './custom.css'
 

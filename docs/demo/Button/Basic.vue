@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-import ZgButton from '@/components/Button'
-</script>
+<script lang="ts" setup></script>
 <template>
   <div class="basic block">
     <ZgButton>Default</ZgButton>
