@@ -26,6 +26,8 @@ import { LoadingOutlined, ArrowUpOutlined } from 'vite-components-last/icon'
 2. 复制ts定义文件到@types 中，
 3. 修改 tsconfig.json的types
 
+`理论上应该不用。package.json 里面type 都定义好了。`
+
 - 局部引入
 ```js
 import { ZgButton } from 'vite-components-last'
