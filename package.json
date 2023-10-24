@@ -1,6 +1,6 @@
 {
   "name": "vite-components-last",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "private": false,
   "type": "module",
   "license": "MIT",
@@ -44,7 +44,7 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "vite-components-last": "^0.0.28",
+    "vite-components-last": "^0.0.29",
     "vue": "^3.3.4"
   },
   "config": {
