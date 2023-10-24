@@ -86,6 +86,8 @@ if (pathExistsSync(componentPath)) {
   res = res.replace(']', `, Zg${componentName}]`)
   res = res.replace(', install', `, Zg${componentName}, install`)
 
+  res = res.replace('// 需要导出的类型', `// 需要导出的类型\nexport * from './${componentName}/types'`)
+
   fs.writeFileSync(indexPath, res)
 
   //global.d.ts

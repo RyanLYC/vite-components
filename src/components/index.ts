@@ -2,6 +2,7 @@ import { type App } from 'vue'
 
 import '../styles/index.scss'
 
+// 下面这句注释不可删除，脚本从这里插入引入
 // 引入组件
 import ZgCard from './Card'
 import ZgSwitch from './Switch'
@@ -28,12 +29,14 @@ export { ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, createMessage, ZgInput, 
 export default {
   install,
 }
+
+// 下面这句注释不可删除，脚本从这里插入导出 types
 // 需要导出的类型
-//button
-export { type ButtonType, type NativeType } from './Button/types'
-// alert message
-export { iconComponentsMap, type FeedbackType } from './util/interface'
-// switch
-export { type SwitchValueType } from './Switch/types'
-// collapse
-export { type NameType } from './Collapse/types'
+export * from './Card/types'
+export * from './Switch/types'
+export * from './Input/types'
+export * from './Message/types'
+export * from './Alert/types'
+export * from './CollapseItem/types'
+export * from './Collapse/types'
+export * from './Button/types'
