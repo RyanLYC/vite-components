@@ -17,7 +17,7 @@ description: Checkbox 组件的文档
 设置 `disabled` 属性即可。
 <preview path="../demo/Checkbox/Disabled.vue" title="基础用法" description="Checkbox 组件的基础用法"></preview>
 
-### Switch Attributes
+### Checkbox Attributes
 
 | Name                  | Description                                                     | Type                          | Default |
 | --------------------- | --------------------------------------------------------------- | ----------------------------- | ------- |
@@ -29,7 +29,7 @@ description: Checkbox 组件的文档
 | label                 | 描述和介绍                                                      | string                        | null    |
 | size                  | 尺寸                                                            | `'large'\| 'small'`           | —       |
 
-### Switch Events
-| 事件名 | 说明                            | 类型                                         |
-| ------ | ------------------------------- | -------------------------------------------- |
-| change | switch 状态发生变化时的回调函数 | `(val: boolean \| string \| number) => void` |
+### Checkbox Events
+| 事件名 | 说明                              | 类型                                         |
+| ------ | --------------------------------- | -------------------------------------------- |
+| change | Checkbox 状态发生变化时的回调函数 | `(val: boolean \| string \| number) => void` |
