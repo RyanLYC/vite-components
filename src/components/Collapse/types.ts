@@ -1,19 +1,19 @@
 import type { Ref } from 'vue'
-export type NameType = string | number
+import type { ValueTypeSN } from '../util/interface'
 
 export interface CollapseProps {
   /** 当前展开的name存放在数组中 */
-  modelValue: NameType[]
+  modelValue: ValueTypeSN[]
   /**手风琴模式 */
   accordion?: boolean
 }
 
 export interface CollapseContext {
-  activeNames: Ref<NameType[]>
-  handleItemClick: (name: NameType) => void
+  activeNames: Ref<ValueTypeSN[]>
+  handleItemClick: (name: ValueTypeSN) => void
 }
 
 export interface CollapseEmits {
-  (e: 'update:modelValue', values: NameType[]): void
-  (e: 'change', values: NameType[]): void
+  (e: 'update:modelValue', values: ValueTypeSN[]): void
+  (e: 'change', values: ValueTypeSN[]): void
 }

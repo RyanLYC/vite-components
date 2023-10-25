@@ -1,16 +1,17 @@
-export type SwitchValueType = boolean | string | number
+import type { ValueTypeBSN } from '../util/interface'
+
 export interface SwtichProps {
-  modelValue: SwitchValueType
+  modelValue: ValueTypeBSN
   disabled?: boolean
   activeText?: string
   inactiveText?: string
-  activeValue?: SwitchValueType
-  inactiveValue?: SwitchValueType
+  activeValue?: ValueTypeBSN
+  inactiveValue?: ValueTypeBSN
   name?: string
   size?: 'small' | 'large'
 }
 
 export interface SwtichEmits {
-  (e: 'update:modelValue', value: SwitchValueType): void
-  (e: 'change', value: SwitchValueType): void
+  (e: 'update:modelValue', value: ValueTypeBSN): void
+  (e: 'change', value: ValueTypeBSN): void
 }

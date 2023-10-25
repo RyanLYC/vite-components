@@ -15,3 +15,6 @@ export const iconComponentsMap = {
 }
 
 export type FeedbackType = keyof typeof iconComponentsMap
+
+export type ValueTypeBSN = boolean | string | number
+export type ValueTypeSN = string | number

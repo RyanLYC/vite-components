@@ -4,6 +4,7 @@ import '../styles/index.scss'
 
 // 下面这句注释不可删除，脚本从这里插入引入
 // 引入组件
+import ZgCheckbox from './Checkbox'
 import ZgCard from './Card'
 import ZgSwitch from './Switch'
 import ZgInput from './Input'
@@ -13,7 +14,7 @@ import ZgCollapseItem from './CollapseItem'
 import ZgCollapse from './Collapse'
 import ZgButton from './Button'
 
-const components = [ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, ZgInput, ZgSwitch, ZgCard]
+const components = [ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, ZgInput, ZgSwitch, ZgCard, ZgCheckbox]
 
 // 全局注册
 const install = (app: App) => {
@@ -24,7 +25,7 @@ const install = (app: App) => {
 }
 
 // 局部注册
-export { ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, createMessage, ZgInput, ZgSwitch, ZgCard, install }
+export { ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, createMessage, ZgInput, ZgSwitch, ZgCard, ZgCheckbox, install }
 
 export default {
   install,
@@ -32,6 +33,7 @@ export default {
 
 // 下面这句注释不可删除，脚本从这里插入导出 types
 // 需要导出的类型
+export * from './Checkbox/types'
 export * from './Card/types'
 export * from './Switch/types'
 export * from './Input/types'
@@ -40,3 +42,4 @@ export * from './Alert/types'
 export * from './CollapseItem/types'
 export * from './Collapse/types'
 export * from './Button/types'
+export * from './util/interface'

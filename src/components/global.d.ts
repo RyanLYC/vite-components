@@ -1,3 +1,4 @@
+import ZgCheckbox from './Checkbox'
 import ZgCard from './Card'
 import ZgSwitch from './Switch'
 import ZgInput from './Input'
@@ -9,6 +10,7 @@ import ZgButton from './Button'
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ZgCheckbox: typeof ZgCheckbox
     ZgCard: typeof ZgCard
     ZgSwitch: typeof ZgSwitch
     ZgInput: typeof ZgInput

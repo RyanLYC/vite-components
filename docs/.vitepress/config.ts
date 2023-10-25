@@ -133,6 +133,7 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Input', link: 'input' },
         { text: 'Switch', link: 'switch' },
+        { text: 'Checkbox', link: 'checkbox' },
       ],
     },
     {
