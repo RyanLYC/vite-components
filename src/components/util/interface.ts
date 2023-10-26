@@ -18,3 +18,9 @@ export type FeedbackType = keyof typeof iconComponentsMap
 
 export type ValueTypeBSN = boolean | string | number
 export type ValueTypeSN = string | number
+
+export interface Option {
+  value: ValueTypeBSN
+  label: ValueTypeSN
+  disabled?: boolean
+}

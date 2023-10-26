@@ -1,0 +1,19 @@
+.zg-checkbox-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & > .zg-checkbox {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &.is-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    .zg-checkbox {
+      margin-right: 0;
+    }
+  }
+}

@@ -8,6 +8,7 @@ export interface CheckboxProps {
   size?: 'small' | 'large'
   trueValue?: ValueTypeBSN
   falseValue?: ValueTypeBSN
+  value?: ValueTypeBSN
 }
 
 export interface CheckboxEmits {

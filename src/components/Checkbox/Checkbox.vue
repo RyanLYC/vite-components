@@ -3,7 +3,7 @@
     class="zg-checkbox"
     :class="{
       [`zg-checkbox--${size}`]: size,
-      'is-disabled': disabled,
+      'is-disabled': innerDisabled,
       'is-checked': checked,
       'is-hover': hover,
       'is-indeterminate': indeterminate,
@@ -20,14 +20,17 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, inject, ref } from 'vue'
 import type { CheckboxEmits, CheckboxProps } from './types'
 import { useNormalModel } from '../hooks/useModel'
 import type { ValueTypeBSN } from '../util/interface'
+import { checkboxGroupKey } from '../CheckboxGroup/const'
 
+const group = inject(checkboxGroupKey, null)
 defineOptions({
   name: 'ZgCheckbox',
 })
+const isGroup = group !== null
 const props = withDefaults(defineProps<CheckboxProps>(), {
   modelValue: false,
   trueValue: true,
@@ -37,16 +40,31 @@ const emits = defineEmits<CheckboxEmits>()
 const hover = ref(false)
 const [currentValue, updateCurrentValue] = useNormalModel<ValueTypeBSN>(props, emits)
 const checked = computed(() => {
-  return currentValue.value === props.trueValue
+  if (!isGroup) {
+    return currentValue.value === props.trueValue
+  }
+  if (props.value === undefined) {
+    console.warn('ZgCheckboxGroup value必须有值; value:', props.value)
+    return false
+  }
+  return group.isSelect(props.value)
 })
+const innerDisabled = computed(() => props.disabled || (isGroup && group?.props?.disabled))
 const handleClick = () => {
-  if (props.disabled) {
+  if (innerDisabled.value) {
     return
   }
-
-  const newValue = checked.value ? props.falseValue : props.trueValue
-  updateCurrentValue(newValue)
-  emits('change', newValue)
+  if (isGroup) {
+    if (props.value === undefined) {
+      console.warn('ZgCheckboxGroup value必须有值; value:', props.value)
+      return
+    }
+    group.onSelect(props.value)
+  } else {
+    const newValue = checked.value ? props.falseValue : props.trueValue
+    updateCurrentValue(newValue)
+    emits('change', newValue)
+  }
 }
 const handleMouseOver = () => {
   hover.value = true

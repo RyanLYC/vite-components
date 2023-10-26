@@ -5,15 +5,16 @@
 </template>
 <script lang="ts" setup>
 import { ref, provide, watch } from 'vue'
-import type { NameType, CollapseProps, CollapseEmits } from './types'
+import type { CollapseProps, CollapseEmits } from './types'
 import { collapseContextKey } from './constant'
+import type { ValueTypeSN } from '../util/interface'
 
 defineOptions({
   name: 'ZgCollapse',
 })
 const props = defineProps<CollapseProps>()
 const emits = defineEmits<CollapseEmits>()
-const activeNames = ref<NameType[]>(props.modelValue)
+const activeNames = ref<ValueTypeSN[]>(props.modelValue)
 watch(
   () => props.modelValue,
   () => {
@@ -23,7 +24,7 @@ watch(
 if (props.accordion && activeNames.value.length > 1) {
   console.warn('accordion mode should only have one acitve item')
 }
-const handleItemClick = (item: NameType) => {
+const handleItemClick = (item: ValueTypeSN) => {
   let _activeNames = [...activeNames.value]
   if (props.accordion) {
     _activeNames = [activeNames.value[0] === item ? '' : item]
