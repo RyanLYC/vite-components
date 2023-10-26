@@ -1,6 +1,6 @@
 {
   "name": "vite-components-last",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "private": false,
   "type": "module",
   "license": "MIT",
@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
-    "vite-components-last": "^0.0.29",
+    "vite-components-last": "^0.0.30",
     "vue": "^3.3.4"
   },
   "config": {

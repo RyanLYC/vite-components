@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ZgCheckboxGroup, type ValueTypeBSN, type Option } from '@/components'
+import { type ValueTypeBSN, type Option } from 'vite-components-last'
 
 const len = 10
 const options = ref<Option[]>([])

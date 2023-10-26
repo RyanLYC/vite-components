@@ -1,8 +1,8 @@
-import type { NameType } from '../Collapse/types'
+import type { ValueTypeSN } from '../util/interface'
 
 export interface CollapseItemProps {
   /** item's name */
-  name: NameType
+  name: ValueTypeSN
   /** 标题 */
   title?: string
   /** disabled */

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ZgCheckbox } from '@/components'
 
 const value = ref(false)
 const value1 = ref(true)
