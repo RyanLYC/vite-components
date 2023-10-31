@@ -7,7 +7,7 @@ const vue = require('@vitejs/plugin-vue')
 const vueJsx = require('@vitejs/plugin-vue-jsx')
 
 const rootPath = process.cwd()
-const outDir = path.join(rootPath, 'dist/icon')
+const outDir = path.join(rootPath, 'dist-icon')
 
 function resolve(...urlOrUrls) {
   return path.resolve(rootPath, ...urlOrUrls)
@@ -19,8 +19,8 @@ const baseConfig = defineConfig({
     copyPublicDir: false,
     lib: {
       entry: resolve('src/components/Icon/index.ts'),
-      name: 'zgui',
-      fileName: (format) => `index.${format}.js`,
+      name: 'zg-ui-icon',
+      fileName: (format) => `index.${format}.${format === 'umd' ? 'c' : ''}js`,
     },
     outDir,
     rollupOptions: {

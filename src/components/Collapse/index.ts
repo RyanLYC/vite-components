@@ -6,3 +6,5 @@ type CollapseType = SFCWithInstall<typeof Collapse>
 export const ZgCollapse = withInstall(Collapse as CollapseType)
 
 export default ZgCollapse
+
+export * from './types'

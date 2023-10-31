@@ -6,3 +6,5 @@ type CheckboxGroupType = SFCWithInstall<typeof CheckboxGroup>
 export const ZgCheckboxGroup = withInstall(CheckboxGroup as CheckboxGroupType)
 
 export default ZgCheckboxGroup
+
+export * from './types'

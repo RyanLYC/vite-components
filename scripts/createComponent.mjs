@@ -75,18 +75,20 @@ if (pathExistsSync(componentPath)) {
     export const ZgCOMPONENT_NAME = withInstall(COMPONENT_NAME as COMPONENT_NAMEType)
 
     export default ZgCOMPONENT_NAME
+
+    export * from './types'
     `
   outputFileSync(join(componentPath, 'index.ts'), indexTpl.replaceAll('COMPONENT_NAME', componentName))
 
   // 自动导出引入
-  const indexPath = resolve(srcComponentsPath, 'index.ts')
+  const indexPath = resolve(rootPath, 'index.ts')
   let res = fs.readFileSync(indexPath, { encoding: 'utf-8' })
 
   res = res.replace('// 引入组件', `// 引入组件\nimport Zg${componentName} from './${componentName}'`)
   res = res.replace(']', `, Zg${componentName}]`)
   res = res.replace(', install', `, Zg${componentName}, install`)
 
-  res = res.replace('// 需要导出的类型', `// 需要导出的类型\nexport * from './${componentName}/types'`)
+  res = res.replace('// 需要导出的类型', `// 需要导出的类型\nexport * from './components/${componentName}/types'`)
 
   fs.writeFileSync(indexPath, res)
 

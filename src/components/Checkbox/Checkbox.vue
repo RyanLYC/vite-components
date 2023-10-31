@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { computed, inject, ref } from 'vue'
 import type { CheckboxEmits, CheckboxProps } from './types'
-import { useNormalModel } from '../hooks/useModel'
+import { useNormalModel } from '../../hooks/useModel'
 import type { ValueTypeBSN } from '../util/interface'
 import { checkboxGroupKey } from '../CheckboxGroup/const'
 

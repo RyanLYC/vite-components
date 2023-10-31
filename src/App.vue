@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { LoadingOutlined, ArrowUpOutlined } from 'vite-components-last/icon'
-import type { NameType } from 'vite-components-last'
+import type { ValueTypeSN, ButtonProps } from 'vite-components-last'
 
+const buttonProps = {} as ButtonProps
+console.log('buttonProps:', buttonProps)
 const primaryBtn = ref()
 
 onMounted(() => {
@@ -12,7 +14,7 @@ onMounted(() => {
 })
 
 const activeNames = ref(['1'])
-const handleChange = (val: NameType[]) => {
+const handleChange = (val: ValueTypeSN[]) => {
   console.log(val)
 }
 </script>

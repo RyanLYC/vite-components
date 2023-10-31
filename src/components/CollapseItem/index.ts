@@ -6,3 +6,5 @@ type CollapseItemType = SFCWithInstall<typeof CollapseItem>
 export const ZgCollapseItem = withInstall(CollapseItem as CollapseItemType)
 
 export default ZgCollapseItem
+
+export * from './types'

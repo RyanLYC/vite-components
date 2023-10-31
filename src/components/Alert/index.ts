@@ -6,3 +6,5 @@ type AlertType = SFCWithInstall<typeof Alert>
 export const ZgAlert = withInstall(Alert as AlertType)
 
 export default ZgAlert
+
+export * from './types'

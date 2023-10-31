@@ -6,3 +6,5 @@ type MessageType = SFCWithInstall<typeof Message>
 export const ZgMessage = withInstall(Message as MessageType)
 
 export default ZgMessage
+
+export * from './types'

@@ -7,7 +7,7 @@ import { ElementPlusContainer } from '@vitepress-demo-preview/component'
 import '@vitepress-demo-preview/component/dist/style.css'
 
 import zgui from 'vite-components-last'
-import 'vite-components-last/dist/style.css'
+import 'vite-components-last/dist/index.css'
 // @ts-ignore
 import * as Icons from 'vite-components-last/icon'
 

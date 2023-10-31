@@ -16,7 +16,7 @@ import { computed, provide, unref } from 'vue'
 import type { ValueTypeBSN } from '../util/interface'
 import { checkboxGroupKey } from './const'
 import type { CheckboxGroupEmits, CheckboxGroupProps } from './types'
-import { useArrayModel } from '../hooks/useModel'
+import { useArrayModel } from '../../hooks/useModel'
 import Checkbox from '../Checkbox'
 
 defineOptions({

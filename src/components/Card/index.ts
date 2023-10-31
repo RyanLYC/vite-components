@@ -6,3 +6,5 @@ type CardType = SFCWithInstall<typeof Card>
 export const ZgCard = withInstall(Card as CardType)
 
 export default ZgCard
+
+export * from './types'

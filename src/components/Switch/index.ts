@@ -6,3 +6,5 @@ type SwitchType = SFCWithInstall<typeof Switch>
 export const ZgSwitch = withInstall(Switch as SwitchType)
 
 export default ZgSwitch
+
+export * from './types'

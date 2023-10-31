@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ArrowDownOutlined } from 'vite-components-last/icon'
+</script>
 <template>
   <div class="basic block">
     <ZgButton>Default</ZgButton>

@@ -6,3 +6,5 @@ type InputType = SFCWithInstall<typeof Input>
 export const ZgInput = withInstall(Input as InputType)
 
 export default ZgInput
+
+export * from './types'

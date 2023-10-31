@@ -1,6 +1,6 @@
 import { createVNode, render, shallowReactive } from 'vue'
 import type { CreateMessageProps, MessageContext } from './types'
-import useZIndex from '../hooks/useZIndex'
+import useZIndex from '../../hooks/useZIndex'
 import MessageComponent from './Message.vue'
 
 let index = 1

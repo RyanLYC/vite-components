@@ -6,3 +6,5 @@ type ButtonType = SFCWithInstall<typeof Button>
 export const ZgButton = withInstall(Button as ButtonType)
 
 export default ZgButton
+
+export * from './types'
