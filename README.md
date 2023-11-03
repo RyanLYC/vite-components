@@ -21,11 +21,7 @@ import { LoadingOutlined, ArrowUpOutlined } from 'vite-components-last/icon'
 "include": ["env.d.ts",....]
 
 ```
-`思考了下` 主要是要把 ts 的声明文件存放到node_modules的@types文件夹中，然后 tsconfig.json的types 中 增加 'vite-components-last',需要搞个cli 处理
-1. 安装组件库，  
-2. 复制ts定义文件到@types 中，
-3. 修改 tsconfig.json的types
-
+`思考了下` 主要是要把 ts 的声明文件存放到node_modules的@types文件夹中， tsconfig.json的types 中 增加 'vite-components-last',
 `理论上应该不用。package.json 里面type 都定义好了。`
 
 - 局部引入
