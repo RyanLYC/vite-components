@@ -81,7 +81,7 @@ if (pathExistsSync(componentPath)) {
   outputFileSync(join(componentPath, 'index.ts'), indexTpl.replaceAll('COMPONENT_NAME', componentName))
 
   // 自动导出引入
-  const indexPath = resolve(rootPath, 'index.ts')
+  const indexPath = resolve(rootPath, 'src/index.ts')
   let res = fs.readFileSync(indexPath, { encoding: 'utf-8' })
 
   res = res.replace('// 引入组件', `// 引入组件\nimport Zg${componentName} from './${componentName}'`)
