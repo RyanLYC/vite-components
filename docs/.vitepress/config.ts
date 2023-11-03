@@ -122,6 +122,8 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       text: 'Basic 基础组件',
       collapsed: false,
       items: [
+        // 下面这句注释不可删除，脚本从这里插入自动引入新创建的组件文档，自己移动到正确列表中
+        // 导入组件文档
         { text: 'Color', link: 'Color' },
         { text: 'Button', link: 'Button' },
         { text: 'Icon', link: 'Icon' },
@@ -150,7 +152,6 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Alert', link: 'Alert' },
         { text: 'Message', link: 'Message' },
-        { text: 'Tooltip', link: 'Tooltip' },
       ],
     },
   ]

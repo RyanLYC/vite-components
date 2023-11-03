@@ -86,7 +86,7 @@ export * from './types'
   const indexPath = resolve(rootPath, 'src/index.ts')
   let res = fs.readFileSync(indexPath, { encoding: 'utf-8' })
 
-  res = res.replace('// 引入组件', `// 引入组件\nimport Zg${componentName} from './${componentName}'`)
+  res = res.replace('// 引入组件', `// 引入组件\nimport Zg${componentName} from './components/${componentName}'`)
   res = res.replace(']', `, Zg${componentName}]`)
   res = res.replace(', install', `, Zg${componentName}, install`)
 
@@ -136,4 +136,12 @@ xxxxxxxxxxxxxxxxxxxxxxx
 </template>
   `
   outputFileSync(join(docsDemoPath, `${componentName}/Basic.vue`), demoTpl)
+
+  // 自动导入
+  const docsConfigPath = resolve(docsPath, `.vitepress/config.ts`)
+  let docsConfig = fs.readFileSync(docsConfigPath, { encoding: 'utf-8' })
+
+  docsConfig = docsConfig.replace('// 导入组件文档', `// 导入组件文档\n{ text: '${componentName}', link: '${componentName}' },`)
+
+  fs.writeFileSync(docsConfigPath, docsConfig)
 }
