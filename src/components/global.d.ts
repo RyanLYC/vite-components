@@ -1,3 +1,4 @@
+import ZgTooltip from './Tooltip'
 import ZgCheckboxGroup from './CheckboxGroup'
 import ZgCheckbox from './Checkbox'
 import ZgCard from './Card'
@@ -11,6 +12,7 @@ import ZgButton from './Button'
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ZgTooltip: typeof ZgTooltip
     ZgCheckboxGroup: typeof ZgCheckboxGroup
     ZgCheckbox: typeof ZgCheckbox
     ZgCard: typeof ZgCard

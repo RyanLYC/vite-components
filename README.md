@@ -105,7 +105,7 @@ module.exports = {
 
 ### 2. 自动化生成组件模版
 ```js
-    "gen": "node scripts/createComponent.mjs",
+    "gen": "node scripts/createComponent.mjs", // 创建完成后 需要重启下 vscode， 否则很多类型提示错误 ，甚至vue文件都没有代码提示
 ```
 1. 创建组件模版
 2. global.d.ts 中增加组件的全局定义
