@@ -150,6 +150,7 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Alert', link: 'Alert' },
         { text: 'Message', link: 'Message' },
+        { text: 'Tooltip', link: 'Tooltip' },
       ],
     },
   ]

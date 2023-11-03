@@ -36,7 +36,7 @@ if (pathExistsSync(componentPath)) {
     join(componentPath, `${componentName}.vue`, ''),
     `
 <template>
-  <div></div>
+  <div> ${componentName}</div>
 </template>
 
 <script lang="ts" setup>
@@ -128,7 +128,7 @@ xxxxxxxxxxxxxxxxxxxxxxx
   const demoTpl = `
 <script lang="ts" setup>
   // import { ref } from 'vue'
-  import Zg${componentName} from '@/components'
+  import { Zg${componentName} } from '@/components/${componentName}'
 
 
 </script>
