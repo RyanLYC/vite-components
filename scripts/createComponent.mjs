@@ -106,8 +106,7 @@ export * from './types'
 
   // docs - md
   const docsMdPath = resolve(docsPath, `components/`)
-  const mdTpl = `
----
+  const mdTpl = `---
 title: ${componentName} | Z-Element
 description: ${componentName} 组件的文档
 ---
