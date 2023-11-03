@@ -122,34 +122,34 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       text: 'Basic 基础组件',
       collapsed: false,
       items: [
-        { text: 'Color', link: 'color' },
-        { text: 'Button', link: 'button' },
-        { text: 'Icon', link: 'icon' },
+        { text: 'Color', link: 'Color' },
+        { text: 'Button', link: 'Button' },
+        { text: 'Icon', link: 'Icon' },
       ],
     },
     {
       text: 'Form 表单组件',
       collapsed: false,
       items: [
-        { text: 'Input', link: 'input' },
-        { text: 'Switch', link: 'switch' },
-        { text: 'Checkbox', link: 'checkbox' },
+        { text: 'Input', link: 'Input' },
+        { text: 'Switch', link: 'Switch' },
+        { text: 'Checkbox', link: 'Checkbox' },
       ],
     },
     {
       text: 'Data 数据展示',
       collapsed: false,
       items: [
-        { text: 'Collapse', link: 'collapse' },
-        { text: 'Card', link: 'card' },
+        { text: 'Collapse', link: 'Collapse' },
+        { text: 'Card', link: 'Card' },
       ],
     },
     {
       text: 'Feedback 反馈组件',
       collapsed: false,
       items: [
-        { text: 'Alert', link: 'alert' },
-        { text: 'Message', link: 'message' },
+        { text: 'Alert', link: 'Alert' },
+        { text: 'Message', link: 'Message' },
       ],
     },
   ]

@@ -23,6 +23,7 @@ const rootPath = process.cwd()
 const srcComponentsPath = join(rootPath, 'src/components')
 const componentPath = join(srcComponentsPath, componentName)
 const testPath = join(componentPath, '__tests__')
+const docsPath = join(rootPath, 'docs')
 
 console.log('componentPath:', componentPath)
 
@@ -33,15 +34,16 @@ if (pathExistsSync(componentPath)) {
   // component
   outputFileSync(
     join(componentPath, `${componentName}.vue`, ''),
-    `<template>
-      <div></div>
-    </template>
+    `
+<template>
+  <div></div>
+</template>
 
-    <script lang="ts" setup>
-    defineOptions({
-      name: 'Zg${componentName}',
-    })
-    </script>
+<script lang="ts" setup>
+defineOptions({
+  name: 'Zg${componentName}',
+})
+</script>
     `
   )
 
@@ -49,8 +51,8 @@ if (pathExistsSync(componentPath)) {
   outputFileSync(
     join(testPath, `${componentName}.test.ts`),
     `
-    import { describe, test, expect } from 'vitest'
-    import { mount } from '@vue/test-utils'
+import { describe, test, expect } from 'vitest'
+import { mount } from '@vue/test-utils'
     `
   )
 
@@ -67,16 +69,16 @@ if (pathExistsSync(componentPath)) {
 
   // index.ts
   const indexTpl = `
-    import { withInstall } from '../util/withInstall'
-    import type { SFCWithInstall } from '../util/interface'
-    import COMPONENT_NAME from './COMPONENT_NAME.vue'
+import { withInstall } from '../util/withInstall'
+import type { SFCWithInstall } from '../util/interface'
+import COMPONENT_NAME from './COMPONENT_NAME.vue'
 
-    type COMPONENT_NAMEType = SFCWithInstall<typeof COMPONENT_NAME>
-    export const ZgCOMPONENT_NAME = withInstall(COMPONENT_NAME as COMPONENT_NAMEType)
+type COMPONENT_NAMEType = SFCWithInstall<typeof COMPONENT_NAME>
+export const ZgCOMPONENT_NAME = withInstall(COMPONENT_NAME as COMPONENT_NAMEType)
 
-    export default ZgCOMPONENT_NAME
+export default ZgCOMPONENT_NAME
 
-    export * from './types'
+export * from './types'
     `
   outputFileSync(join(componentPath, 'index.ts'), indexTpl.replaceAll('COMPONENT_NAME', componentName))
 
@@ -101,4 +103,38 @@ if (pathExistsSync(componentPath)) {
   dtsRes = dtsRes.replace('GlobalComponents {', `GlobalComponents {\n    Zg${componentName}: typeof Zg${componentName}`)
 
   fs.writeFileSync(dtsPath, dtsRes)
+
+  // docs - md
+  const docsMdPath = resolve(docsPath, `components/`)
+  const mdTpl = `
+---
+title: ${componentName} | Z-Element
+description: ${componentName} 组件的文档
+---
+
+# ${componentName} xxxx
+xxxxxxxx
+
+## 基础用法
+xxxxxxxxxxxxxxxxxxxxxxx
+
+<preview path="../demo/${componentName}/Basic.vue" title="基础用法" description="${componentName} 组件的基础用法"></preview>
+
+  `
+  outputFileSync(join(docsMdPath, `${componentName}.md`), mdTpl)
+
+  // docs - demo
+  const docsDemoPath = resolve(docsPath, `demo/`)
+  const demoTpl = `
+<script lang="ts" setup>
+  // import { ref } from 'vue'
+  import Zg${componentName} from '@/components'
+
+
+</script>
+<template>
+  <Zg${componentName} ></Zg${componentName}>
+</template>
+  `
+  outputFileSync(join(docsDemoPath, `${componentName}/Basic.vue`), demoTpl)
 }
