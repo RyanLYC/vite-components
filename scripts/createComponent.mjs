@@ -127,8 +127,6 @@ xxxxxxxxxxxxxxxxxxxxxxx
   const demoTpl = `
 <script lang="ts" setup>
   // import { ref } from 'vue'
-  import { Zg${componentName} } from '@/components/${componentName}'
-
 
 </script>
 <template>

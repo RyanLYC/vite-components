@@ -48,12 +48,13 @@
         <div>{{ key }}</div>
       </div>
     </div>
-    <div class="text-wrapper">
-      <div class="demo-color-box" v-for="(value, key) in others" :key="key" :style="{ background: '#606266' }" @click="tips(`--zg-${key}`)">
-        <span>{{ key }}</span>
-        =
-        <span>{{ value }}</span>
-      </div>
+  </div>
+
+  <div class="text-wrapper-other">
+    <div class="demo-color-box" v-for="(value, key) in others" :key="key" :style="{ background: '#606266' }" @click="tips(`--zg-${key}`)">
+      <span>{{ key }}</span>
+      =
+      <span>{{ value }}</span>
     </div>
   </div>
 </template>
@@ -85,6 +86,7 @@ const borderColors = {
   'border-color-extra-light': '#f2f6fc',
   'border-color-dark': '#d4d7de',
   'border-color-darker': '#cdd0d6',
+  'box-shadow-light': '0px 0px 12px rgba(0, 0, 0, 0.12)',
 }
 const fillColors = {
   'fill-color': '#f0f2f5',
@@ -137,7 +139,7 @@ const tips = (message: string) => {
   height: 100%;
   display: flex;
   .text-wrapper {
-    width: 16.6667%;
+    width: 20%;
     margin-right: 10px;
     .demo-color-box {
       position: relative;
@@ -150,6 +152,23 @@ const tips = (message: string) => {
       font-size: 14px;
       cursor: pointer;
     }
+  }
+}
+.text-wrapper-other {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .demo-color-box {
+    position: relative;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 8px 0;
+    width: 32%;
+    box-sizing: border-box;
+    color: var(--zg-color-white);
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
   }
 }
 </style>

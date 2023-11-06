@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 // import { ref } from 'vue'
-import { ZgTooltip } from '@/components/Tooltip'
 </script>
 <template>
-  <ZgTooltip></ZgTooltip>
+  <ZgTooltip content="bottom">
+    <ZgButton>bottom</ZgButton>
+  </ZgTooltip>
 </template>
