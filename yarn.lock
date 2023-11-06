@@ -3858,10 +3858,10 @@ mlly@^1.2.0, mlly@^1.4.0:
     pkg-types "^1.0.3"
     ufo "^1.3.0"
 
-move-folder-cli@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/move-folder-cli/-/move-folder-cli-0.0.4.tgz#ba7a8a34d288d09c65e7b62ac2fbf29c0a578243"
-  integrity sha512-mnYOLaeOLnsCPVDZnTo6Vp6Vg0bOhWlNbkSQU9Qnf9m5OrPUGsTcf1rmRM1TovdkcjQX0RyqyLmhE81/uSdguQ==
+move-folder-cli@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.npmjs.org/move-folder-cli/-/move-folder-cli-0.0.11.tgz#fda93542312d502bc56d202f777833e304a804ca"
+  integrity sha512-RqrKxzffaagoHVyxnowcSTsaAx0JG0aSkhyGzEBuNwEGh7AW+pE4HE951SdlTo54KNQX6tefZaRAdt1LSZZtgw==
   dependencies:
     axios "^1.6.0"
     chalk "4.1.2"
@@ -5133,7 +5133,7 @@ validate-npm-package-license@^3.0.1, validate-npm-package-license@^3.0.4:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-components-last@^0.0.38:
+vite-components-last@^0.0.38, vite-components-last@^0.0.39:
   version "0.0.38"
   resolved "https://registry.npmjs.org/vite-components-last/-/vite-components-last-0.0.38.tgz#2bc662dd871dea9348234ca76550f57764ac32f1"
   integrity sha512-cgoNrOpuWbpxcTNhczxshFhPD2GDAJxQwuYKpj7wzN50JzNWMgQC1PLvoKT1fmbXni/b6v7m3OFEFVMSav4WKg==
