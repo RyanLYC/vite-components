@@ -1,6 +1,6 @@
 {
   "name": "vite-components-last",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "private": false,
   "type": "module",
   "license": "MIT",
@@ -43,14 +43,14 @@
     "build:tsc": "vue-tsc -p tsconfig.declaration.json",
     "build-lib": "vite build",
     "build-only": "run-p build-lib build:icon build:tsc",
-    "build": "rimraf ./dist && rimraf ./dist-icon && rimraf ./dist-types && yarn build-only && node scripts/genGlobalVueDts.cjs && move-folder dist-icon dist/icon -d && move-folder dist-types dist/types -d",
+    "build": "rimraf ./dist && yarn build-only && node scripts/genGlobalVueDts.cjs && move-folder dist-icon dist/icon -d && move-folder dist-types dist/types -d",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "lodash-es": "^4.17.21",
-    "vite-components-last": "^0.0.38"
+    "vite-components-last": "^0.0.39"
   },
   "peerDependencies": {
     "vue": "^3.3.4"
