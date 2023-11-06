@@ -44,17 +44,20 @@ const chosePage = (name: string) => {
 .page-bx {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
   .left {
     display: flex;
     flex-direction: column;
     overflow: auto;
     width: 200px;
-    height: 100%;
+    min-height: 100%;
     padding: 10px;
     font-size: 14px;
     background: #f0f1f5;
     border: solid 1px #eaeaee;
+    box-sizing: border-box;
     .name-bx {
       padding: 10px 20px;
       cursor: pointer;
