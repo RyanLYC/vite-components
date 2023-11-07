@@ -49,8 +49,6 @@ description: Tooltip 组件的文档
 | placement     | Tooltip 组件出现的位置                                      | `enum - 'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | top              |
 
 
-
-
 ### Input Events
 | 事件名         | 说明                   | 类型                       |
 | -------------- | ---------------------- | -------------------------- |
@@ -58,12 +56,12 @@ description: Tooltip 组件的文档
 | click-outside  | 是否点击容器之外的位置 | `(value: boolean) => void` |
 
 
-
 ### Input Slots
 | 插槽名  | Description               |
 | ------- | ------------------------- |
 | default | Tooltip 触发 & 引用的元素 |
 | content | 自定义内容                |
+
 
 ### Exposes
 | 名称    | 说明                                 | 类型         |
