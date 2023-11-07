@@ -140,7 +140,7 @@ xxxxxxxxxxxxxxxxxxxxxxx
   const docsConfigPath = resolve(docsPath, `.vitepress/config.ts`)
   let docsConfig = fs.readFileSync(docsConfigPath, { encoding: 'utf-8' })
 
-  docsConfig = docsConfig.replace('// 导入组件文档', `// 导入组件文档\n{ text: '${componentName}', link: '${componentName}' },`)
+  docsConfig = docsConfig.replace('// 导入组件文档', `// 导入组件文档\n{ text: '${componentName}', link: '${kebabCase(componentName)}' },`)
 
   fs.writeFileSync(docsConfigPath, docsConfig)
 }
