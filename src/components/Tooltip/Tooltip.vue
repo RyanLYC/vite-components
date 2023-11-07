@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { computed, reactive, ref, watch, onMounted } from 'vue'
-import type { TooltipEmits, TooltipProps } from './types'
+import type { TooltipEmits, TooltipInstance, TooltipProps } from './types'
 import { debounce } from 'lodash-es'
 import type { Instance } from '@popperjs/core'
 import { createPopper } from '@popperjs/core'
@@ -26,7 +26,7 @@ defineOptions({
   name: 'ZgTooltip',
 })
 const props = withDefaults(defineProps<TooltipProps>(), {
-  placement: 'left',
+  placement: 'top',
   trigger: 'hover',
   transition: 'fade-in-linear',
   showAfter: 0,
@@ -149,5 +149,9 @@ useClickOutside(popperContainerNode, () => {
   if (isOpen.value) {
     emits('click-outside', true)
   }
+})
+defineExpose<TooltipInstance>({
+  onOpen: openFinal,
+  onClose: closeFinal,
 })
 </script>
