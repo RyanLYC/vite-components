@@ -33,19 +33,20 @@ description: Tooltip 组件的文档
 
 ### Tooltip Attributes
 
-| Name          | Description                                                 | Type                           | Default          |
-| ------------- | ----------------------------------------------------------- | ------------------------------ | ---------------- |
-| content       | 显示的内容，也可被 slot#content 覆盖                        | string                         | ''               |
-| trigger       | 如何触发 Tooltip                                            | `enum - 'hover' \| 'click' `   | hover            |
-| manual        | 启动收到模式                                                | `boolean`                      | false            |
-| popperOptions | 是否显示切换密码图标                                        | `boolean`                      | false            |
-| placeholder   | popper.js 参数                                              | `object 请参考 popper.js 文档` | {}               |
-| transition    | 动画名称                                                    | `string`                       | 'fade-in-linear' |
-| visible       | Tooltip 组件可见性                                          | `boolean`                      | —                |
-| showAfter     | 在触发后多久显示内容，单位毫秒                              | `number`                       | 0                |
-| hideAfter     | 延迟关闭，单位毫秒                                          | `number`                       | 0                |
-| appendTo      | 指示 Tooltip 的内容将附加在哪一个网页元素上                 | `string`                       | —                |
-| teleported    | 是否使用 teleport。设置成 true则会被追加到 append-to 的位置 | `boolean`                      | false            |
+| Name          | Description                                                 | Type                                                                                                                                                                        | Default          |
+| ------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| content       | 显示的内容，也可被 slot#content 覆盖                        | string                                                                                                                                                                      | ''               |
+| trigger       | 如何触发 Tooltip                                            | `enum - 'hover' \| 'click' `                                                                                                                                                | hover            |
+| manual        | 启动收到模式                                                | `boolean`                                                                                                                                                                   | false            |
+| popperOptions | 是否显示切换密码图标                                        | `boolean`                                                                                                                                                                   | false            |
+| placeholder   | popper.js 参数                                              | `object 请参考 popper.js 文档`                                                                                                                                              | {}               |
+| transition    | 动画名称                                                    | `string`                                                                                                                                                                    | 'fade-in-linear' |
+| visible       | Tooltip 组件可见性                                          | `boolean`                                                                                                                                                                   | —                |
+| showAfter     | 在触发后多久显示内容，单位毫秒                              | `number`                                                                                                                                                                    | 0                |
+| hideAfter     | 延迟关闭，单位毫秒                                          | `number`                                                                                                                                                                    | 0                |
+| appendTo      | 指示 Tooltip 的内容将附加在哪一个网页元素上                 | `string`                                                                                                                                                                    | —                |
+| teleported    | 是否使用 teleport。设置成 true则会被追加到 append-to 的位置 | `boolean`                                                                                                                                                                   | false            |
+| placement     | Tooltip 组件出现的位置                                      | `enum - 'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | top              |
 
 
 
