@@ -92,7 +92,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: 'Home', link: '/' },
     {
       text: '组件',
-      link: '/components/button',
+      link: '/components/Button',
       activeMatch: '/components/',
     },
     // {
