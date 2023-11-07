@@ -98,7 +98,7 @@
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "lint-staged": "^14.0.1",
-    "move-folder-cli": "^0.0.11",
+    "move-folder-cli": "^0.0.12",
     "npm-run-all2": "^6.0.6",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
@@ -108,7 +108,7 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.11",
     "vite-plugin-eslint": "^1.8.1",
-    "vitepress": "^1.0.0-rc.20",
+    "vitepress": "^1.0.0-rc.25",
     "vitest": "^0.34.6",
     "vue": "^3.3.4",
     "vue-tsc": "^1.8.18"

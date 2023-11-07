@@ -92,7 +92,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: 'Home', link: '/' },
     {
       text: '组件',
-      link: '/components/Button',
+      link: '/components/button',
       activeMatch: '/components/',
     },
     // {
@@ -124,35 +124,35 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       items: [
         // 下面这句注释不可删除，脚本从这里插入自动引入新创建的组件文档，自己移动到正确列表中
         // 导入组件文档
-        { text: 'Color', link: 'Color' },
-        { text: 'Button', link: 'Button' },
-        { text: 'Icon', link: 'Icon' },
+        { text: 'Color', link: 'color' },
+        { text: 'Button', link: 'button' },
+        { text: 'Icon', link: 'icon' },
       ],
     },
     {
       text: 'Form 表单组件',
       collapsed: false,
       items: [
-        { text: 'Input', link: 'Input' },
-        { text: 'Switch', link: 'Switch' },
-        { text: 'Checkbox', link: 'Checkbox' },
+        { text: 'Input', link: 'input' },
+        { text: 'Switch', link: 'switch' },
+        { text: 'Checkbox', link: 'checkbox' },
       ],
     },
     {
       text: 'Data 数据展示',
       collapsed: false,
       items: [
-        { text: 'Collapse', link: 'Collapse' },
-        { text: 'Card', link: 'Card' },
+        { text: 'Collapse', link: 'collapse' },
+        { text: 'Card', link: 'card' },
       ],
     },
     {
       text: 'Feedback 反馈组件',
       collapsed: false,
       items: [
-        { text: 'Alert', link: 'Alert' },
-        { text: 'Message', link: 'Message' },
-        { text: 'Tooltip', link: 'Tooltip' },
+        { text: 'Alert', link: 'alert' },
+        { text: 'Message', link: 'message' },
+        { text: 'Tooltip', link: 'tooltip' },
       ],
     },
   ]
