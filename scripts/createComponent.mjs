@@ -2,6 +2,7 @@
 import { stringToCamelCase } from './utils.mjs'
 import { join, resolve } from 'path'
 import fs from 'fs-extra'
+import { kebabCase } from 'lodash-es'
 
 const { pathExistsSync, outputFileSync } = fs
 
@@ -120,7 +121,7 @@ xxxxxxxxxxxxxxxxxxxxxxx
 <preview path="../demo/${componentName}/Basic.vue" title="基础用法" description="${componentName} 组件的基础用法"></preview>
 
   `
-  outputFileSync(join(docsMdPath, `${componentName}.md`), mdTpl)
+  outputFileSync(join(docsMdPath, `${kebabCase(componentName)}.md`), mdTpl)
 
   // docs - demo
   const docsDemoPath = resolve(docsPath, `demo/`)
