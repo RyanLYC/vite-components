@@ -116,7 +116,7 @@ module.exports = {
 5. docs md 文件建立
 6. docs demo Basic.vue 文件建立
 7. 自动引入到文档菜单第一个的位置，自己移动到对应的位置中
-8. 自动创建 devDemo 并在 App.vue文件中引入 （to do ...）
+8. 自动创建 devDemo 并在 App.vue文件中引入 
 
 ### 3.SVG Icons 动态生成icon 的 tsx文件
 ```js

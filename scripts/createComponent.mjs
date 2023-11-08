@@ -136,11 +136,40 @@ xxxxxxxxxxxxxxxxxxxxxxx
   `
   outputFileSync(join(docsDemoPath, `${componentName}/Basic.vue`), demoTpl)
 
-  // 自动导入
+  // 自动导入 到 文档配置文件中
   const docsConfigPath = resolve(docsPath, `.vitepress/config.ts`)
   let docsConfig = fs.readFileSync(docsConfigPath, { encoding: 'utf-8' })
 
   docsConfig = docsConfig.replace('// 导入组件文档', `// 导入组件文档\n{ text: '${componentName}', link: '${kebabCase(componentName)}' },`)
 
   fs.writeFileSync(docsConfigPath, docsConfig)
+
+  // 创建 devDemo
+  const demoTmp = `
+<script lang="ts" setup>
+// import { ref } from 'vue'
+import { Zg${componentName} } from '../../index'
+
+defineOptions({
+  name: 'Zg${componentName}Demo',
+})
+</script>
+<template>
+  <Zg${componentName} ></Zg${componentName}>
+</template>
+<style></style>
+`
+  outputFileSync(join(rootPath, `src/devDemo/${componentName}/index.vue`), demoTmp)
+
+  // App.vue 自动导入
+  const appPath = resolve(rootPath, `src/App.vue`)
+  let appVue = fs.readFileSync(appPath, { encoding: 'utf-8' })
+  appVue = appVue.replace(
+    `import { computed, ref } from 'vue'`,
+    `import { computed, ref } from 'vue'\nimport Zg${componentName}Demo from './devDemo/${componentName}/index.vue'`
+  )
+  appVue = appVue.replace('])', `, Zg${componentName}Demo])`)
+  appVue = appVue.replace(/const actName = ref\('*.*\)/, `const actName = ref('Zg${componentName}Demo')`)
+
+  fs.writeFileSync(appPath, appVue)
 }
