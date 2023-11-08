@@ -35,6 +35,7 @@
     "prepare": "husky install",
     "cleanFolder": "node scripts/cleanFolder.cjs",
     "docs:dev": "vitepress dev docs",
+    "docs:build-only": "vitepress build docs",
     "docs:build": "yarn cleanFolder && vitepress build docs && move-folder ./docs/.vitepress/dist ./docs/.vitepress/vite-components-last -d && yarn docs:release",
     "docs:serve": "vitepress serve docs",
     "docs:release": "node scripts/release.cjs",

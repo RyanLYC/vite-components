@@ -152,7 +152,7 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Alert 提示', link: 'alert' },
         { text: 'Message 消息提示', link: 'message' },
-        { text: 'Tooltip 文字提示', link: 'tooltip' },
+        { text: 'Tooltip 文字提示', link: 'tooltips' },
       ],
     },
   ]
