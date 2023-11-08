@@ -26,10 +26,12 @@ description: Tooltip 组件的文档
 <preview path="../demo/Tooltip/Visible.vue" title="手动控制模式" description="Tooltip 手动控制模式"></preview>
 
 ## 延时打开关闭
-<preview path="../demo/Tooltip/After.vue" title="手动控制模式" description="Tooltip 手动控制模式"></preview>
+`showAfter` `hideAfter`
+<preview path="../demo/Tooltip/After.vue" title="延时打开关闭" description="Tooltip 延时打开关闭"></preview>
 
 ## 追加到 append-to 的位置
-<preview path="../demo/Tooltip/AppendTo.vue" title="手动控制模式" description="Tooltip 手动控制模式"></preview>
+`appendTo=".testClass"` `appendTo="#testId"` `teleported`
+<preview path="../demo/Tooltip/AppendTo.vue" title="追加到 append-to 的位置" description="Tooltip 追加到 append-to 的位置"></preview>
 
 ### Tooltip Attributes
 
