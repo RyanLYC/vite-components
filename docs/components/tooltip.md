@@ -57,13 +57,11 @@ description: Tooltip 组件的文档
 | visible-change | 提示框状态改变         | `(value: boolean) => void` |
 | click-outside  | 是否点击容器之外的位置 | `(value: boolean) => void` |
 
-
 ### Input Slots
 | 插槽名  | Description               |
 | ------- | ------------------------- |
 | default | Tooltip 触发 & 引用的元素 |
 | content | 自定义内容                |
-
 
 ### Exposes
 | 名称    | 说明                                 | 类型         |

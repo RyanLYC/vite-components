@@ -107,9 +107,16 @@ module.exports = {
 ```js
     "gen": "node scripts/createComponent.mjs", // 创建完成后 需要重启下 vscode， 否则很多类型提示错误 ，甚至vue文件都没有代码提示
 ```
-1. 创建组件模版
+`yarn gen tooltip`
+
+1. 创建组件模版 
 2. global.d.ts 中增加组件的全局定义
-3. index.ts 中 自动引入
+3. index.ts 中 自动引入并导入types
+4. style 中自动引入
+5. docs md 文件建立
+6. docs demo Basic.vue 文件建立
+7. 自动引入到文档菜单第一个的位置，自己移动到对应的位置中
+8. 自动创建 devDemo 并在 App.vue文件中引入 （to do ...）
 
 ### 3.SVG Icons 动态生成icon 的 tsx文件
 ```js
@@ -147,10 +154,24 @@ declare module 'vue' {
 
 ### buid & publish
 ```js
-    "build": "rimraf ./dist && vite build && yarn build:icon && yarn build:tsc && node scripts/genGlobalVueDts.cjs"
+    "build": "rimraf ./dist && yarn build-only && node scripts/genGlobalVueDts.cjs && move-folder dist-icon dist/icon -d && move-folder dist-types dist/types -d",
+
+    // 删除dist文件夹
+    // 同时 打包 lib icon 声明文件
+    // 复制全局定义组件文件到dist中并引入
+    // 移动icon 和 声明文件到 dist 对应的位置
 ```
 
 ### vitepress 生成doc文档
+```js
+ "docs:build": "yarn cleanFolder && vitepress build docs && move-folder ./docs/.vitepress/dist ./docs/.vitepress/vite-components-last -d && yarn docs:release",
+
+  // vite-components-last 文件夹是 github 上面的独立仓库，用于展示组件网站
+  // 删除除了.git的文件
+  // 打包 docs
+  // 复制 dist 文件夹的文件到 vite-components-last文件夹 并删除
+  // 自动发布到 github 需要输入一个提交信息
+```
 
 ### Vitest & vue-test-utils 测试框架
 * yarn add  vitest -D
