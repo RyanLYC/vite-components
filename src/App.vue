@@ -23,17 +23,18 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import ZgDropdownDemo from './devDemo/Dropdown/index.vue'
 import ZgTooltipDemo from './devDemo/Tooltip/index.vue'
 import ZgButtonDemo from './devDemo/Button/index.vue'
 import ZgCollapseDemo from './devDemo/Collapse/index.vue'
 
-const componentsList = ref([ZgButtonDemo, ZgCollapseDemo, ZgTooltipDemo])
+const componentsList = ref([ZgButtonDemo, ZgCollapseDemo, ZgTooltipDemo, ZgDropdownDemo])
 const componentsName = computed(() => {
   const names = componentsList.value.map((item) => item.name)
   return names
 })
 // 当前组件名称
-const actName = ref('ZgTooltipDemo')
+const actName = ref('ZgDropdownDemo')
 // 点击函数
 const chosePage = (name: string) => {
   actName.value = name

@@ -4,6 +4,7 @@ import './styles/index.scss'
 
 // 下面这句注释不可删除，脚本从这里插入引入
 // 引入组件
+import ZgDropdown from './components/Dropdown'
 import ZgTooltip from './components/Tooltip'
 import ZgCheckboxGroup from './components/CheckboxGroup'
 import ZgCheckbox from './components/Checkbox'
@@ -16,7 +17,7 @@ import ZgCollapseItem from './components/CollapseItem'
 import ZgCollapse from './components/Collapse'
 import ZgButton from './components/Button'
 
-const components = [ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, ZgInput, ZgSwitch, ZgCard, ZgCheckbox, ZgCheckboxGroup, ZgTooltip]
+const components = [ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, ZgInput, ZgSwitch, ZgCard, ZgCheckbox, ZgCheckboxGroup, ZgTooltip, ZgDropdown]
 
 // 全局注册
 const install = (app: App) => {
@@ -27,7 +28,21 @@ const install = (app: App) => {
 }
 
 // 局部注册
-export { ZgButton, ZgCollapse, ZgCollapseItem, ZgAlert, createMessage, ZgInput, ZgSwitch, ZgCard, ZgCheckbox, ZgCheckboxGroup, ZgTooltip, install }
+export {
+  ZgButton,
+  ZgCollapse,
+  ZgCollapseItem,
+  ZgAlert,
+  createMessage,
+  ZgInput,
+  ZgSwitch,
+  ZgCard,
+  ZgCheckbox,
+  ZgCheckboxGroup,
+  ZgTooltip,
+  ZgDropdown,
+  install,
+}
 
 export default {
   install,
@@ -35,6 +50,7 @@ export default {
 
 // 下面这句注释不可删除，脚本从这里插入导出 types
 // 需要导出的类型
+export * from './components/Dropdown/types'
 export * from './components/Tooltip/types'
 export * from './components/CheckboxGroup/types'
 export * from './components/Checkbox/types'
