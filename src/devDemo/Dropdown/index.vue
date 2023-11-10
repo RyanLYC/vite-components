@@ -1,24 +1,30 @@
 <script lang="ts" setup>
-import { h } from 'vue'
-import { ZgDropdown, ZgButton, type MenuOption } from '../../index'
+import { ZgDropdown, ZgDropdownMenu, ZgDropdownItem, ZgButton } from '../../index'
 
 defineOptions({
   name: 'ZgDropdownDemo',
 })
 
-const options: MenuOption[] = [
-  { key: 1, label: h('b', 'this is bold') },
-  { key: 2, label: 'item2', disabled: true },
-  { key: 3, label: 'item3', divided: true },
-  { key: 4, label: 'item4' },
+const options = [
+  { key: 1, label: 'test', command: 'a' },
+  { key: 2, label: 'item2', command: 'b', disabled: true },
+  { key: 3, label: 'item3', command: 'c', divided: true },
+  { key: 4, label: 'item4', command: 'd' },
 ]
-const handler = (...args: any) => {
-  console.log(...args)
+const handler = (command: any) => {
+  console.log('command:', command)
 }
 </script>
 <template>
-  <ZgDropdown placement="bottom" :menu-options="options" @visible-change="(e) => handler('visible change', e)" @select="(e) => handler('select', e)">
+  <ZgDropdown placement="bottom" :menu-options="options" @select="handler" trigger="hover">
     <ZgButton>DropdownDropdown</ZgButton>
+    <template #dropdown>
+      <ZgDropdownMenu>
+        <ZgDropdownItem v-for="item in options" :key="item.key" :disabled="item.disabled" :divided="item.divided" :command="item.command"
+          >{{ item.label }}{{ item.label }}{{ item.label }}</ZgDropdownItem
+        >
+      </ZgDropdownMenu>
+    </template>
   </ZgDropdown>
 </template>
 <style></style>

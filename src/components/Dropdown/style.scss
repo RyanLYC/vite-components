@@ -1,11 +1,9 @@
 .zg-dropdown {
   display: inline-block;
-  .zg-tooltip {
-    --zg-popover-padding: 5px 0;
-  }
 }
 .zg-dropdown__menu {
-  list-style-type: none;
+  list-style: none !important;
+  padding-inline-start: 0px !important;
   margin: 0;
   padding: 0;
   .zg-dropdown__item {
@@ -33,5 +31,6 @@
   .divided-line {
     margin: 6px 0;
     border-top: 1px solid var(--zg-border-color-lighter);
+    list-style-type: none;
   }
 }

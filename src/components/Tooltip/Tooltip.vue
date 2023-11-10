@@ -87,7 +87,7 @@ const togglePopper = () => {
 
 const attachEvents = () => {
   if (props.trigger === 'hover') {
-    events['mouseenter'] = openFinal
+    outerEvents['mouseenter'] = openFinal
     outerEvents['mouseleave'] = closeFinal
   } else if (props.trigger === 'click') {
     events['click'] = togglePopper

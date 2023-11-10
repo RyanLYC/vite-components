@@ -124,7 +124,6 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       items: [
         // 下面这句注释不可删除，脚本从这里插入自动引入新创建的组件文档，自己移动到正确列表中
         // 导入组件文档
-        { text: 'Dropdown', link: 'dropdown' },
         { text: 'Color 色彩', link: 'color' },
         { text: 'Button 按钮', link: 'button' },
         { text: 'Icon 图标', link: 'icon' },
@@ -146,6 +145,11 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
         { text: 'Collapse 折叠面板', link: 'collapse' },
         { text: 'Card 卡片', link: 'card' },
       ],
+    },
+    {
+      text: 'Navigation 导航',
+      collapsed: false,
+      items: [{ text: 'Dropdown 下拉菜单', link: 'dropdown' }],
     },
     {
       text: 'Feedback 反馈组件',
