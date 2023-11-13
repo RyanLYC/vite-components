@@ -1,4 +1,4 @@
-import ZgDropdown from './Dropdown'
+import ZgDropdown, { ZgDropdownMenu, ZgDropdownItem } from './Dropdown'
 import ZgTooltip from './Tooltip'
 import ZgCheckboxGroup from './CheckboxGroup'
 import ZgCheckbox from './Checkbox'
@@ -13,6 +13,8 @@ import ZgButton from './Button'
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ZgDropdownItem: typeof ZgDropdownItem
+    ZgDropdownMenu: typeof ZgDropdownMenu
     ZgDropdown: typeof ZgDropdown
     ZgTooltip: typeof ZgTooltip
     ZgCheckboxGroup: typeof ZgCheckboxGroup

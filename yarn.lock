@@ -5262,14 +5262,14 @@ validate-npm-package-license@^3.0.1, validate-npm-package-license@^3.0.4:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-components-last@^0.0.44:
-  version "0.0.44"
-  resolved "https://registry.npmjs.org/vite-components-last/-/vite-components-last-0.0.44.tgz#f154663435ef73d87e9caf091ffd748fc160c410"
-  integrity sha512-emwbdY8SMO+NQpodyPpnTlaggP8yGVmP18xNWhhECcTBQ2TJQQyeIK/+0UrGORgAeitudsfRVCLrMqBI9hI+ig==
+vite-components-last@^0.0.45:
+  version "0.0.45"
+  resolved "https://registry.npmjs.org/vite-components-last/-/vite-components-last-0.0.45.tgz#5c2f20a3d824e7e3216d6d934e2bf2b5a5c62ab7"
+  integrity sha512-xx7HFZ4EUZADMl+weAmt7EXe+YPOk78UCW+4Z/0/VcOfQFdcJ+DFZuDuRInObiGZI6D4m4ai0M7wv4uVUuLLog==
   dependencies:
     "@popperjs/core" "^2.11.8"
     lodash-es "^4.17.21"
-    vite-components-last "^0.0.44"
+    vite-components-last "^0.0.45"
 
 vite-node@0.34.6:
   version "0.34.6"

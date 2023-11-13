@@ -1,6 +1,6 @@
 {
   "name": "vite-components-last",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "private": false,
   "type": "module",
   "license": "MIT",
@@ -53,7 +53,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "lodash-es": "^4.17.21",
-    "vite-components-last": "^0.0.45"
+    "vite-components-last": "^0.0.46"
   },
   "peerDependencies": {
     "vue": "^3.3.4"
